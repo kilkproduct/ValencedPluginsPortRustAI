@@ -1,0 +1,21 @@
+{
+  "name": "no-embed-copy",
+  "target_id": "phoenix.no-embed-copy",
+  "description": "Make embeds copy their link instead of opening it",
+  "version": "1.0.0",
+  "original": {
+    "id": "thororen.no-embed-copy",
+    "name": "No Embed Copy",
+    "author": "thororen",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/no-embed-copy"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "ui.onEvent (intercept)",
+    "ui.addMessageAction",
+    "ui.copy"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

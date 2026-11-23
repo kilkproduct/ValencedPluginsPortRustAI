@@ -1,0 +1,21 @@
+{
+  "name": "character-counter",
+  "target_id": "phoenix.character-counter",
+  "description": "Shows the character count, colored like Discord's own counter",
+  "version": "1.0.0",
+  "original": {
+    "id": "thororen.character-counter",
+    "name": "Character Counter",
+    "author": "thororen",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/character-counter"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "messages.onSend",
+    "ui.addComposerButton",
+    "ButtonRemover.update"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

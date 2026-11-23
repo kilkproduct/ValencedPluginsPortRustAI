@@ -1,0 +1,22 @@
+{
+  "name": "clear-urls",
+  "target_id": "phoenix.clear-urls",
+  "description": "Removes tracking parameters from links you send and receive",
+  "version": "1.0.0",
+  "original": {
+    "id": "hakuxyz.clear-urls",
+    "name": "Clear URLs",
+    "author": "hakuxyz",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/clear-urls"
+  },
+  "compatibility": "A",
+  "status": "IMPLEMENTED",
+  "phoenix_api": [
+    "gateway.messageCreate/messageUpdate (hook before)",
+    "messages.onSend",
+    "ui.addMessageAction",
+    "ui.copy"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

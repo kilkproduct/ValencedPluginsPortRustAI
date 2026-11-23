@@ -1,0 +1,20 @@
+{
+  "name": "show-timeout-duration",
+  "target_id": "phoenix.show-timeout-duration",
+  "description": "Show how long a timed-out user has left, next to their message",
+  "version": "1.0.0",
+  "original": {
+    "id": "palmdevs.show-timeout-duration",
+    "name": "Show Timeout Duration",
+    "author": "Palm",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/show-timeout-duration"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "gateway.messageCreate (on + hook after)",
+    "ui.addMessageAccessory"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "link-alert-copy",
+  "target_id": "phoenix.link-alert-copy",
+  "description": "Copy a link before leaving Discord",
+  "version": "1.0.0",
+  "original": {
+    "id": "palmdevs.link-alert-copy",
+    "name": "Link Alert Copy",
+    "author": "Palm",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/link-alert-copy"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "ui.onEvent (intercept)",
+    "ui.addMessageAction",
+    "ui.copy"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

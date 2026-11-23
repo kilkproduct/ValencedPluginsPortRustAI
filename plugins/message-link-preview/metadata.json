@@ -1,0 +1,21 @@
+{
+  "name": "message-link-preview",
+  "target_id": "phoenix.message-link-preview",
+  "description": "Preview messages you are linked to, right in chat",
+  "version": "1.0.0",
+  "original": {
+    "id": "palmdevs.message-link-preview",
+    "name": "Message Link Preview",
+    "author": "Palm",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/message-link-preview"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "ui.addMessageAccessory",
+    "ui.addMessageAction",
+    "discord.get"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

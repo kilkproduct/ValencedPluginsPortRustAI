@@ -1,0 +1,22 @@
+{
+  "name": "tenor-gif-search",
+  "target_id": "phoenix.tenor-gif-search",
+  "description": "Brings back Tenor GIF search through /tenor",
+  "version": "1.0.0",
+  "original": {
+    "id": "palmdevs.tenor-gif-search",
+    "name": "Tenor GIF Search",
+    "author": "Palm",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/tenor-gif-search"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "commands.register",
+    "fetch",
+    "ui.openPage",
+    "ui.copy"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

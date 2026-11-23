@@ -1,0 +1,19 @@
+{
+  "name": "show-tag",
+  "target_id": "phoenix.show-tag",
+  "description": "Show usernames next to display names in chat",
+  "version": "1.0.0",
+  "original": {
+    "id": "bleelblep.show-tag",
+    "name": "Show Tag",
+    "author": "bleelblep",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/show-tag"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "ui.addMessageAccessory placement: header"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

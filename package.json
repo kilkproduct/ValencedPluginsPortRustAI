@@ -1,0 +1,17 @@
+{
+  "name": "phoenix-community-ports",
+  "version": "1.0.0",
+  "description": "Valenced Community Plugins migrated to Phoenix Unlock",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node scripts/test.mjs",
+    "check": "npm run typecheck && npm run build && npm run test"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.0"
+  }
+}

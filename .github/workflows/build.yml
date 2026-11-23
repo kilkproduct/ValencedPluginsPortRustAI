@@ -1,0 +1,65 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      plugin:
+        description: "Bundle only this plugin directory (blank = all)"
+        required: false
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # The TypeScript declarations are the API contract. They are vendored
+      # under .vendor/phoenix; fetch the checked-out Phoenix tree if it is
+      # missing (for forks that do not commit .vendor).
+      - name: Ensure Phoenix API declarations
+        run: |
+          test -f .vendor/phoenix/crates/runtime/phoenix.d.ts || {
+            git clone --depth 1 --filter=blob:none --sparse https://github.com/mantikafasi/phoenix-unlock /tmp/phoenix
+            git -C /tmp/phoenix sparse-checkout set crates/runtime web/tools plugins
+            mkdir -p .vendor/phoenix
+            cp -r /tmp/phoenix/crates .vendor/phoenix/
+          }
+
+      - run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+
+      - name: Typecheck (strict, against phoenix.d.ts)
+        run: npm run typecheck
+
+      - name: Bundle plugins
+        if: ${{ !inputs.plugin }}
+        run: npm run build
+
+      - name: Bundle one plugin
+        if: ${{ inputs.plugin }}
+        run: npx esbuild "plugins/${{ inputs.plugin }}/src/index.ts" --bundle --format=iife --target=es2023 --outfile="dist/${{ inputs.plugin }}.js"
+
+      - name: Runtime smoke test (mock phoenix global)
+        run: npm test
+
+      - name: Verify inventory and docs are current
+        run: |
+          node scripts/docs.mjs
+          git diff --exit-code -- migration plugins || {
+            echo "::error::migration/status.json or plugin docs are stale — run node scripts/docs.mjs and commit"
+            exit 1
+          }
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: phoenix-community-ports-dist
+          path: dist/
+          if-no-files-found: error

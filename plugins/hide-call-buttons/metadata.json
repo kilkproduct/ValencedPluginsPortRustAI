@@ -1,0 +1,19 @@
+{
+  "name": "hide-call-buttons",
+  "target_id": "phoenix.hide-call-buttons",
+  "description": "Hide call and video buttons on profiles and in DMs",
+  "version": "1.0.0",
+  "original": {
+    "id": "bleelblep.hide-call-buttons",
+    "name": "Hide Call Buttons",
+    "author": "bleelblep",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/hide-call-buttons"
+  },
+  "compatibility": "B",
+  "status": "IMPLEMENTED",
+  "phoenix_api": [
+    "ui.hide"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

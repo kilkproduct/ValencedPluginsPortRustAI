@@ -1,0 +1,19 @@
+{
+  "name": "silent-typing",
+  "target_id": "phoenix.silent-typing",
+  "description": "Stops Discord from sending typing indicators when you type",
+  "version": "1.0.0",
+  "original": {
+    "id": "palmdevs.silent-typing",
+    "name": "Silent Typing",
+    "author": "Palm",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/silent-typing"
+  },
+  "compatibility": "A",
+  "status": "IMPLEMENTED",
+  "phoenix_api": [
+    "discord.onRequest"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}
