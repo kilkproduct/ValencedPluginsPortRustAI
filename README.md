@@ -13,7 +13,7 @@ does, against Phoenix's API, as independently installable plugins.
 | | |
 | --- | --- |
 | Catalogue inventoried | **47** plugins |
-| Ported and building | **28** (8 fully, plus partial ports below) |
+| Ported and building | **28** (10 fully equivalent, 18 partial) |
 | Fully equivalent | **10** |
 | Partial (documented gaps) | **18** |
 | Not portable (documented) | **19** |
@@ -36,8 +36,8 @@ what is missing, and its original author.
 
 ## Compatibility table
 
-`A` directly portable · `B` adaptable · `C` needs a missing Phoenix capability · `D` partially portable ·
-`E` incompatible. Only `A` and `B` are used for shipped plugins; `C`/`D` gaps are spelled out per plugin.
+`A` directly portable (3) · `B` adaptable (7) · `C` needs a missing Phoenix capability (11) · `D` partially portable (18) ·
+`E` incompatible (8). Every ported plugin is `A`, `B` or `D`; the gaps of each `B` and `D` are spelled out per plugin.
 
 | Plugin | Author | Version | Class | Status | Missing functionality |
 | --- | --- | --- | --- | --- | --- |
