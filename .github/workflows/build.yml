@@ -1,8 +1,11 @@
 name: build
 
+# Everything runs on GitHub's hosted runners, including the typecheck: the
+# TypeScript declarations are the API contract, so they are fetched rather
+# than assumed. `.vendor/` is not committed (see .gitignore).
 on:
   push:
-    branches: [main]
+    branches: ["**"]
   pull_request:
   workflow_dispatch:
     inputs:
@@ -10,6 +13,9 @@ on:
         description: "Bundle only this plugin directory (blank = all)"
         required: false
         type: string
+
+env:
+  PHOENIX_REPO: https://github.com/mantikafasi/phoenix-unlock
 
 jobs:
   build:
@@ -22,44 +28,61 @@ jobs:
           node-version: 22
           cache: npm
 
-      # The TypeScript declarations are the API contract. They are vendored
-      # under .vendor/phoenix; fetch the checked-out Phoenix tree if it is
-      # missing (for forks that do not commit .vendor).
-      - name: Ensure Phoenix API declarations
+      - name: Fetch Phoenix API declarations and bundler reference
         run: |
-          test -f .vendor/phoenix/crates/runtime/phoenix.d.ts || {
-            git clone --depth 1 --filter=blob:none --sparse https://github.com/mantikafasi/phoenix-unlock /tmp/phoenix
-            git -C /tmp/phoenix sparse-checkout set crates/runtime web/tools plugins
-            mkdir -p .vendor/phoenix
-            cp -r /tmp/phoenix/crates .vendor/phoenix/
-          }
+          set -euo pipefail
+          if [ -f .vendor/phoenix/crates/runtime/phoenix.d.ts ]; then
+            echo "using vendored Phoenix tree"
+            exit 0
+          fi
+          git clone --depth 1 --filter=blob:none --sparse "$PHOENIX_REPO" /tmp/phoenix
+          git -C /tmp/phoenix sparse-checkout set crates/runtime crates/wire web/tools plugins
+          mkdir -p .vendor
+          mv /tmp/phoenix .vendor/phoenix
+          test -f .vendor/phoenix/crates/runtime/phoenix.d.ts
 
       - run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
 
       - name: Typecheck (strict, against phoenix.d.ts)
         run: npm run typecheck
 
-      - name: Bundle plugins
+      - name: Bundle every plugin
         if: ${{ !inputs.plugin }}
         run: npm run build
 
       - name: Bundle one plugin
         if: ${{ inputs.plugin }}
-        run: npx esbuild "plugins/${{ inputs.plugin }}/src/index.ts" --bundle --format=iife --target=es2023 --outfile="dist/${{ inputs.plugin }}.js"
+        run: |
+          set -euo pipefail
+          npx tsc -p tsconfig.json
+          npx esbuild "plugins/${{ inputs.plugin }}/src/index.ts" \
+            --bundle --format=iife --target=es2023 \
+            --outfile="dist/${{ inputs.plugin }}.js"
 
-      - name: Runtime smoke test (mock phoenix global)
+      - name: Behavioural tests (mock phoenix runtime)
         run: npm test
 
-      - name: Verify inventory and docs are current
+      - name: Inventory and plugin docs are current
         run: |
+          set -euo pipefail
           node scripts/docs.mjs
-          git diff --exit-code -- migration plugins || {
-            echo "::error::migration/status.json or plugin docs are stale — run node scripts/docs.mjs and commit"
+          if ! git diff --quiet -- migration plugins; then
+            git --no-pager diff --stat -- migration plugins
+            echo "::error::migration/status.json or generated plugin docs are stale — run node scripts/docs.mjs and commit the result"
             exit 1
-          }
+          fi
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload bundles
+        uses: actions/upload-artifact@v4
         with:
           name: phoenix-community-ports-dist
           path: dist/
           if-no-files-found: error
+
+      - name: Upload test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phoenix-community-ports-test-results
+          path: migration/test-results.json
+          if-no-files-found: warn

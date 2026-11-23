@@ -25,7 +25,7 @@ machine-readable version is [`status.json`](status.json) and the raw test output
 | Not portable (class C/E) with a documented reason | 19 (C: 11, E: 8) |
 | TypeScript errors | 0 (`strict`, against the real `phoenix.d.ts`) |
 | Bundles produced | 28 `dist/<name>.js` + `dist/index.json` |
-| Runtime smoke tests | 28/28 passing (`npm test`) |
+| Behavioural tests (mock runtime) | 28/28 passing (`npm test`), each asserting documented behaviour, not just "did not throw" |
 | Plugins with individual README + metadata | 28/28 |
 
 ## Verification status (important)
@@ -34,11 +34,17 @@ Every ported plugin is at **`TESTING` → `MOCK_PASSED`**, *not* `VERIFIED`, and
 
 - **Static — done.** Strict `tsc` against the checked-out `phoenix.d.ts`; esbuild bundles each plugin with
   Phoenix's own conventions (IIFE, ES2023, `// @` banner).
-- **Runtime — done in a mock.** `scripts/test.mjs` evaluates each bundle with a `phoenix` global modelled on
-  the declarations, feeds a realistic `GatewayMessage` (with mentions, attachments, reactions, a reply
-  reference, a timeout, code fences and a tracking URL) through every registered hook, renders every
+- **Behaviour — done in a mock, with assertions.** `scripts/test.mjs` evaluates each bundle with a `phoenix`
+  global modelled on the declarations, feeds a realistic `GatewayMessage` (mentions, attachments, reactions,
+  a reply reference, a timeout, code fences, a tracking URL, a message link and emoji markup) through every
+  registered hook, drives outgoing text, emoji picks and request interception, renders every
   accessory/section/tab, presses every visible message action, button and command, fires injected view
-  events, then runs `onUnload` and settles promises. 28/28 pass with no throws.
+  events, then runs `onUnload`. Then it **asserts the documented behaviour** per plugin — e.g.
+  `utm_source` is gone from a sent link (clear-urls), `<:party:555>` became a CDN GIF link (fake-nitro),
+  a known delete was dropped and marked (message-logger), a blocked author's message was dropped
+  (hide-blocked-messages), the tag rendered as `Some One (@someone)` (show-tag), the Tenor `.mp4` became
+  `.gif` (tenor-gif-fix), the embed URL was copied (no-embed-copy). 28/28 pass.
+  A plugin without assertions fails the suite, so new ports cannot be added untested.
 - **Device — not done.** No Android device or emulator with Phoenix Unlock was available in this
   environment, so *nothing here has been observed running inside Discord*. Concretely unverified:
   accessibility ids other than the ones Phoenix's own bundled plugins use, real REST responses with a live

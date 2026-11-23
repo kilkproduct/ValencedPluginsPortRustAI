@@ -52,7 +52,9 @@ node scripts/docs.mjs   # regenerate plugins/*/README.md + metadata.json from mi
 ## Testing
 
 `scripts/test.mjs` builds a mock `phoenix` object that mirrors the declarations (gateway handles are opaque
-objects, `settings.define` returns defaults, `discord.*` returns plausible JSON) and then, for each bundle:
+objects, `settings.define` returns defaults, `discord.*` returns plausible JSON), drives each bundle, and
+then **asserts its documented behaviour** through the `EXPECT` table — a plugin with no expectations fails,
+so a new port cannot be merged without a behavioural assertion. For each bundle the harness:
 
 1. evaluates it and lets module-level promises settle;
 2. runs every registered `before`/`after` gateway hook with a realistic `GatewayMessage`, a delete and a
@@ -64,6 +66,21 @@ objects, `settings.define` returns defaults, `discord.*` returns plausible JSON)
 6. fires injected view events, then calls every `onUnload` cleanup and settles promises again.
 
 Results are printed and written to `migration/test-results.json`.
+
+Add an expectation when you add a plugin:
+
+```js
+const EXPECT = {
+  "my-plugin": (observed) => {
+    assert(observed.onSend.some((t) => t === "expected"), "message rewrite missing");
+  },
+};
+```
+
+`observed` carries everything the plugin did: `hooks` (per event, `kept`/`dropped`), `observers`, `onSend`
+outputs, `emojiPicks`, `accessories`, `actions`, `profileSections`, `profileTabs`, `commands` (per name),
+`requests` (typing etc.), `viewEvents` results, `pages` opened, `copies`, `replies`, `hides` and
+`buttonUpdates` (the patches passed to `ButtonRemover.update`).
 
 **What this does and does not prove.** It proves the bundle parses, registers, handles a realistic payload
 without throwing, and unloads cleanly. It does *not* prove that Discord renders the accessory the way a phone

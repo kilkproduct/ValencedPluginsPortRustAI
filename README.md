@@ -19,7 +19,7 @@ does, against Phoenix's API, as independently installable plugins.
 | Not portable (documented) | **19** |
 | TypeScript | strict, ES2023, `npx tsc` clean |
 | Bundles | 28 files in `dist/`, esbuild IIFE, Phoenix's own conventions |
-| Tests | `npm test` — mock-runtime smoke test, 28/28 passing |
+| Tests | `npm test` — mock-runtime behavioural assertions, 28/28 passing |
 
 Every plugin is also listed in [`migration/status.json`](migration/status.json) with its classification,
 what is missing, and its original author.

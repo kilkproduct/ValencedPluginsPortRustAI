@@ -3,3 +3,6 @@ dist/
 .vendor/
 *.log
 .DS_Store
+
+# Build output and vendored sources are generated; see README for how the
+# CI workflow fetches Phoenix's declarations when .vendor/ is absent.
