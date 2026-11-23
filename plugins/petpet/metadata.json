@@ -1,0 +1,21 @@
+{
+  "name": "petpet",
+  "target_id": "phoenix.petpet",
+  "description": "PetPet anyone with /petpet",
+  "version": "1.0.0",
+  "original": {
+    "id": "dev.cocobo1.petpet",
+    "name": "PetPet",
+    "author": "cocobo1",
+    "version": "1.0.2",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/petpet"
+  },
+  "compatibility": "B",
+  "status": "IMPLEMENTED",
+  "phoenix_api": [
+    "commands.register",
+    "discord.get",
+    "onSend-free"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

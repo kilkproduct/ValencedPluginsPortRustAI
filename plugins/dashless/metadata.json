@@ -1,0 +1,21 @@
+{
+  "name": "dashless",
+  "target_id": "phoenix.dashless",
+  "description": "Show the open channel's name without dashes",
+  "version": "1.0.0",
+  "original": {
+    "id": "k1ngop.dashless",
+    "name": "Dashless",
+    "author": "k1ng_op",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/dashless"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "ui.addHeaderButton",
+    "commands.register",
+    "discord.get"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "fake-nitro",
+  "target_id": "phoenix.fake-nitro",
+  "description": "Send custom emojis from any server, and animated ones, as image links",
+  "version": "1.0.0",
+  "original": {
+    "id": "palmdevs.fake-nitro",
+    "name": "Fake Nitro",
+    "author": "Palm",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/fake-nitro"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "messages.onEmojiPick",
+    "messages.onSend",
+    "stores.sql",
+    "discord.get"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

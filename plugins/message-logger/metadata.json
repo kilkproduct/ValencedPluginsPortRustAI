@@ -1,0 +1,21 @@
+{
+  "name": "message-logger",
+  "target_id": "phoenix.message-logger",
+  "description": "Keeps deleted messages and edit history visible in chat",
+  "version": "1.0.0",
+  "original": {
+    "id": "palmdevs.message-logger",
+    "name": "Message Logger",
+    "author": "Palm",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/message-logger"
+  },
+  "compatibility": "A",
+  "status": "IMPLEMENTED",
+  "phoenix_api": [
+    "gateway.messageCreate/Update/Delete/DeleteBulk (hook before)",
+    "ui.addMessageAccessory",
+    "Remover.update"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

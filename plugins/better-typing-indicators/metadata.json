@@ -1,0 +1,21 @@
+{
+  "name": "better-typing-indicators",
+  "target_id": "phoenix.better-typing-indicators",
+  "description": "Show who is typing, with names, in the open channel",
+  "version": "1.0.0",
+  "original": {
+    "id": "palmdevs.better-typing-indicators",
+    "name": "Better Typing Indicators",
+    "author": "Palm",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/better-typing-indicators"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "gateway.typingStart (on)",
+    "gateway.messageCreate (hook after)",
+    "ui.addMessageAccessory placement: header"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

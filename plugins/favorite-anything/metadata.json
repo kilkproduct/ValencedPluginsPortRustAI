@@ -1,0 +1,22 @@
+{
+  "name": "favorite-anything",
+  "target_id": "phoenix.favorite-anything",
+  "description": "Favorite any image or video, not just GIFs",
+  "version": "1.0.0",
+  "original": {
+    "id": "theunrealzaka.favorite-anything",
+    "name": "Favorite Anything",
+    "author": "TheUnrealZaka",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/favorite-anything"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "ui.addMessageAction",
+    "discord.post",
+    "storage",
+    "ui.openPage"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

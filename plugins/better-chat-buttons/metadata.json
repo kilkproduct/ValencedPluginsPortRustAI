@@ -1,0 +1,20 @@
+{
+  "name": "better-chat-buttons",
+  "target_id": "phoenix.better-chat-buttons",
+  "description": "Hides annoying chat buttons (Gift, Voice Message, and more)",
+  "version": "1.0.0",
+  "original": {
+    "id": "palmdevs.better-chat-buttons",
+    "name": "Better Chat Buttons",
+    "author": "Palm",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/better-chat-buttons"
+  },
+  "compatibility": "B",
+  "status": "IMPLEMENTED",
+  "phoenix_api": [
+    "ui.hide",
+    "settings onChange"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

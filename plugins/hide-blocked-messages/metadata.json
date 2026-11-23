@@ -1,0 +1,20 @@
+{
+  "name": "hide-blocked-messages",
+  "target_id": "phoenix.hide-blocked-messages",
+  "description": "Hides messages from blocked and ignored users",
+  "version": "1.0.0",
+  "original": {
+    "id": "palmdevs.hide-blocked-messages",
+    "name": "Hide Blocked Messages",
+    "author": "Palm",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/hide-blocked-messages"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "gateway.messageCreate (hook before)",
+    "discord.get"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

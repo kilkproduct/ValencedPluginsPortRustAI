@@ -1,0 +1,6 @@
+# The migration inventory and docs are generated; keep line endings stable so
+# CI's freshness check is meaningful on Windows checkouts too.
+migration/** text eol=lf
+plugins/**/README.md text eol=lf
+plugins/**/metadata.json text eol=lf
+dist/** text eol=lf

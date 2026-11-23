@@ -1,0 +1,20 @@
+{
+  "name": "youbar-plus",
+  "target_id": "phoenix.youbar-plus",
+  "description": "Add Settings, Favorites and DM buttons to the chat header",
+  "version": "1.0.0",
+  "original": {
+    "id": "purpleeyez.youbar-plus",
+    "name": "YouBar+",
+    "author": "Purple_Ξye™",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/youbar-plus"
+  },
+  "compatibility": "B",
+  "status": "IMPLEMENTED",
+  "phoenix_api": [
+    "ui.addHeaderButton",
+    "settings onChange"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

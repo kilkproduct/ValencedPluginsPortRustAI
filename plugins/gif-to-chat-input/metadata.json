@@ -1,0 +1,23 @@
+{
+  "name": "gif-to-chat-input",
+  "target_id": "phoenix.gif-to-chat-input",
+  "description": "Holds picked GIFs in the chatbox instead of sending them",
+  "version": "1.0.0",
+  "original": {
+    "id": "dev.benjii.gtci",
+    "name": "GIF to Chat Input",
+    "author": "j",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/gif-to-chat-input"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "commands.register",
+    "ui.addComposerButton",
+    "storage",
+    "messages.addLocal",
+    "ui.copy"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

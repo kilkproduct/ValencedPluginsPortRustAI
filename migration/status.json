@@ -1,0 +1,1239 @@
+{
+  "source": "Valenced Community Plugins (github.com/Valenced/valenced-community-plugins @ 4dbc3f9d)",
+  "target": "Phoenix Unlock (github.com/mantikafasi/phoenix-unlock @ 4527ff50)",
+  "total": 47,
+  "completed": 10,
+  "partial": 18,
+  "blocked": 19,
+  "plugins": [
+    {
+      "original_id": "dev.tralwdwd.action-sheet-patcher",
+      "original_name": "tralwdwd's action sheet patcher library",
+      "original_author": "tralwdwdd",
+      "original_version": "1.0.0",
+      "source_dir": "action-sheet-patcher",
+      "source_reference": ".vendor/vc-plugins/plugins/action-sheet-patcher/manifest.json",
+      "target_id": "phoenix.action-sheet-patcher",
+      "compatibility": "E",
+      "status": "BLOCKED",
+      "missing_functionality": "No action-sheet patching API in Phoenix; Valenced library for patching Discord action sheets.",
+      "notes": "Library plugin with no user-facing behavior. Phoenix has no action-sheet patch target (message menu rows are added via ui.addMessageAction instead).",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "tralwdwdd",
+      "original_author_url": "https://github.com/tralwdwd",
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "wolfie.add-attachments",
+      "original_name": "Add Attachments",
+      "original_author": "Wolfie",
+      "original_version": "1.0.0",
+      "source_dir": "add-attachments",
+      "source_reference": ".vendor/vc-plugins/plugins/add-attachments/manifest.json",
+      "target_id": "phoenix.add-attachments",
+      "compatibility": "C",
+      "status": "BLOCKED",
+      "missing_functionality": "No message-edit UI or attachment-upload interception API.",
+      "notes": "Requires patching the message edit flow and upload pipeline. Phoenix messages.onSend only covers new sends.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "Wolfie",
+      "original_author_url": "https://wolfies.org/",
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "k1ngop.anonymous-file-names",
+      "original_name": "Anonymous File Names",
+      "original_author": "k1ng_op",
+      "original_version": "1.0.0",
+      "source_dir": "anonymous-file-names",
+      "source_reference": ".vendor/vc-plugins/plugins/anonymous-file-names/manifest.json",
+      "target_id": "phoenix.anonymous-file-names",
+      "compatibility": "C",
+      "status": "BLOCKED",
+      "missing_functionality": "No file-picker or upload filename interception API.",
+      "notes": "Requires intercepting Discord's upload pipeline before send. Phoenix has no upload hook.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "k1ng_op",
+      "original_author_url": null,
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "valenced.api.themes",
+      "original_name": "Themes API",
+      "original_author": "Valenced",
+      "original_version": "1.0.1",
+      "source_dir": "api.themes",
+      "source_reference": ".vendor/vc-plugins/plugins/api.themes/manifest.json",
+      "target_id": "phoenix.api.themes",
+      "compatibility": "E",
+      "status": "BLOCKED",
+      "missing_functionality": "No theme/font/icon-pack API; native Android theme engine.",
+      "notes": "Valenced Themes API library backed by native Android code. Phoenix has no plugin theme system.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "Valenced",
+      "original_author_url": null,
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "palmdevs.better-chat-buttons",
+      "original_name": "Better Chat Buttons",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "better-chat-buttons",
+      "source_reference": ".vendor/vc-plugins/plugins/better-chat-buttons/manifest.json",
+      "target_id": "phoenix.better-chat-buttons",
+      "compatibility": "B",
+      "status": "IMPLEMENTED",
+      "missing_functionality": "Apps & Commands and New Thread have no accessibility id known to plugins. Send-button collapse behaviour is not exposed.",
+      "notes": "Hides composer and header buttons by accessibility id, live, as settings change. Ported surface: ui.hide, settings onChange.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=350.2"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Palm",
+      "original_author_url": "https://github.com/sponsors/PalmDevs",
+      "implementation_status": "IMPLEMENTED"
+    },
+    {
+      "original_id": "palmdevs.better-typing-indicators",
+      "original_name": "Better Typing Indicators",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "better-typing-indicators",
+      "source_reference": ".vendor/vc-plugins/plugins/better-typing-indicators/manifest.json",
+      "target_id": "phoenix.better-typing-indicators",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "The channel list cannot be patched, so nothing is drawn there. Requires a build that exposes `typingStart` (an event registry entry, not a typed payload).",
+      "notes": "Listens to `typingStart` and names the people typing in the channel as a header accessory, expiring entries after Discord's ten-second window. Ported surface: gateway.typingStart (on), gateway.messageCreate (hook after), ui.addMessageAccessory placement: header.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Palm",
+      "original_author_url": "https://github.com/sponsors/PalmDevs",
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "palmdevs.block-youtube-ads",
+      "original_name": "Block YouTube Ads",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "block-youtube-ads",
+      "source_reference": ".vendor/vc-plugins/plugins/block-youtube-ads/manifest.json",
+      "target_id": "phoenix.block-youtube-ads",
+      "compatibility": "E",
+      "status": "BLOCKED",
+      "missing_functionality": "Android-only; no WebView script injection API.",
+      "notes": "Injects AdGuard script into YouTube WebView via native Android. Phoenix has no WebView injection.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "Palm",
+      "original_author_url": "https://palmdevs.me",
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "mxtiy.audiofix",
+      "original_name": "Bluetooth Audio Fix",
+      "original_author": "NoReplyUI5",
+      "original_version": "1.0.0.1",
+      "source_dir": "bluetooth-audio-fix",
+      "source_reference": ".vendor/vc-plugins/plugins/bluetooth-audio-fix/manifest.json",
+      "target_id": "phoenix.bluetooth-audio-fix",
+      "compatibility": "C",
+      "status": "BLOCKED",
+      "missing_functionality": "No audio-route interception; cannot hook Discord's Bluetooth route switching.",
+      "notes": "Voice host module exposes setAudioRoute via bridge but not Discord's internal route decisions.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "NoReplyUI5",
+      "original_author_url": "https://github.com/NoReplyUI5",
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "thororen.character-counter",
+      "original_name": "Character Counter",
+      "original_author": "thororen",
+      "original_version": "1.0.0",
+      "source_dir": "character-counter",
+      "source_reference": ".vendor/vc-plugins/plugins/character-counter/manifest.json",
+      "target_id": "phoenix.character-counter",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "No live count while typing: plugins cannot read the composer.",
+      "notes": "Counts the last sent message and shows it on a composer button, tinting yellow near Discord's 2000-character limit and red past it. Ported surface: messages.onSend, ui.addComposerButton, ButtonRemover.update.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "thororen",
+      "original_author_url": "https://www.thororen.com",
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "hakuxyz.clear-urls",
+      "original_name": "Clear URLs",
+      "original_author": "hakuxyz",
+      "original_version": "1.0.0",
+      "source_dir": "clear-urls",
+      "source_reference": ".vendor/vc-plugins/plugins/clear-urls/manifest.json",
+      "target_id": "phoenix.clear-urls",
+      "compatibility": "A",
+      "status": "IMPLEMENTED",
+      "missing_functionality": "",
+      "notes": "Rewrites incoming messages in gateway hooks and outgoing text in `messages.onSend`, using the original's tracking-parameter list; a message action copies cleaned text. Ported surface: gateway.messageCreate/messageUpdate (hook before), messages.onSend, ui.addMessageAction, ui.copy.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "hakuxyz",
+      "original_author_url": "https://github.com/hakuxyz",
+      "implementation_status": "IMPLEMENTED"
+    },
+    {
+      "original_id": "dev.cocobo1.command-lib",
+      "original_name": "Coco's Command Lib",
+      "original_author": "cocobo1",
+      "original_version": "2.0.0",
+      "source_dir": "cocos-command-lib",
+      "source_reference": ".vendor/vc-plugins/plugins/cocos-command-lib/manifest.json",
+      "target_id": "phoenix.cocos-command-lib",
+      "compatibility": "E",
+      "status": "BLOCKED",
+      "missing_functionality": "Valenced command library; Phoenix provides native commands.register.",
+      "notes": "Library with no standalone behavior; superseded by native Phoenix commands API.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "cocobo1",
+      "original_author_url": "https://cocobo1.dev",
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "k1ngop.dashless",
+      "original_name": "Dashless",
+      "original_author": "k1ng_op",
+      "original_version": "1.0.0",
+      "source_dir": "dashless",
+      "source_reference": ".vendor/vc-plugins/plugins/dashless/manifest.json",
+      "target_id": "phoenix.dashless",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "Cannot change the channel list rows. Names are cached after the first lookup.",
+      "notes": "Shows the dash-less name in a header button and in `/dashless`, and never renames anything on Discord. Ported surface: ui.addHeaderButton, commands.register, discord.get.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "k1ng_op",
+      "original_author_url": null,
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "valenced.developer-kit",
+      "original_name": "Developer Kit",
+      "original_author": "Valenced",
+      "original_version": "1.0.0",
+      "source_dir": "developer-kit",
+      "source_reference": ".vendor/vc-plugins/plugins/developer-kit/manifest.json",
+      "target_id": "phoenix.developer-kit",
+      "compatibility": "E",
+      "status": "BLOCKED",
+      "missing_functionality": "Valenced module finder/patcher inspection tools have no Phoenix equivalent.",
+      "notes": "Developer tooling for Valenced internals (finders, patcher). Phoenix exposes no module system to inspect.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=350.4"
+        },
+        "valenced.settings": {
+          "version": "*",
+          "optional": true
+        },
+        "valenced.api.hidden": {
+          "version": "*",
+          "optional": true
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "Valenced",
+      "original_author_url": null,
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "k1ngop.disable-call-idle",
+      "original_name": "Disable Call Idle",
+      "original_author": "k1ng_op",
+      "original_version": "1.0.0",
+      "source_dir": "disable-call-idle",
+      "source_reference": ".vendor/vc-plugins/plugins/disable-call-idle/manifest.json",
+      "target_id": "phoenix.disable-call-idle",
+      "compatibility": "C",
+      "status": "BLOCKED",
+      "missing_functionality": "No voice connection management API.",
+      "notes": "Requires preventing Discord from disconnecting idle voice sessions. Phoenix has no voice API.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "k1ng_op",
+      "original_author_url": null,
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "palmdevs.fake-nitro",
+      "original_name": "Fake Nitro",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "fake-nitro",
+      "source_reference": ".vendor/vc-plugins/plugins/fake-nitro/manifest.json",
+      "target_id": "phoenix.fake-nitro",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "Stickers, themes, app icons and stream quality are not portable: no plugin API. Reactions keep their Nitro lock.",
+      "notes": "Sends custom and animated emojis as image links, with the original's settings (size, link style, permission check). Emoji data comes from Phoenix's guild cache, and Nitro tier from `/users/@me`. Ported surface: messages.onEmojiPick, messages.onSend, stores.sql, discord.get.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Palm",
+      "original_author_url": "https://palmdevs.me",
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "theunrealzaka.favorite-anything",
+      "original_name": "Favorite Anything",
+      "original_author": "TheUnrealZaka",
+      "original_version": "1.0.0",
+      "source_dir": "favorite-anything",
+      "source_reference": ".vendor/vc-plugins/plugins/favorite-anything/manifest.json",
+      "target_id": "phoenix.favorite-anything",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "Not integrated with Discord's GIF picker. Favorites live in plugin storage.",
+      "notes": "Favorites any image or video attachment from the message menu, keeps them in plugin storage, renews expiring CDN signatures in batches via `/attachments/refresh-urls`, and lists them from settings. Ported surface: ui.addMessageAction, discord.post, storage, ui.openPage.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "TheUnrealZaka",
+      "original_author_url": "https://www.theunrealzaka.me",
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "contrabag.file-size-on-picker",
+      "original_name": "File Size on Picker",
+      "original_author": "contrabags",
+      "original_version": "1.0.0",
+      "source_dir": "file-size-on-picker",
+      "source_reference": ".vendor/vc-plugins/plugins/file-size-on-picker/manifest.json",
+      "target_id": "phoenix.file-size-on-picker",
+      "compatibility": "C",
+      "status": "BLOCKED",
+      "missing_functionality": "No media picker UI patch target.",
+      "notes": "Requires patching Discord's media picker rows. Phoenix has no picker target.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "contrabags",
+      "original_author_url": "https://github.com/contrabag",
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "dev.benjii.gtci",
+      "original_name": "GIF to Chat Input",
+      "original_author": "j",
+      "original_version": "1.0.0",
+      "source_dir": "gif-to-chat-input",
+      "source_reference": ".vendor/vc-plugins/plugins/gif-to-chat-input/manifest.json",
+      "target_id": "phoenix.gif-to-chat-input",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "Cannot intercept the picker itself. Cannot insert text into the composer.",
+      "notes": "`/hold <link>` stores a GIF link and a composer button copies it back, so a picked GIF is never auto-sent. Ported surface: commands.register, ui.addComposerButton, storage, messages.addLocal, ui.copy.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "j",
+      "original_author_url": null,
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "wolfie.global-badges",
+      "original_name": "Global Badges",
+      "original_author": "Wolfie",
+      "original_version": "1.0.0",
+      "source_dir": "global-badges",
+      "source_reference": ".vendor/vc-plugins/plugins/global-badges/manifest.json",
+      "target_id": "phoenix.global-badges",
+      "compatibility": "B",
+      "status": "IMPLEMENTED",
+      "missing_functionality": "Cannot replace or add to Discord's own badge row. No drag-to-reorder and no per-provider toggles (no settings list control).",
+      "notes": "Fetches the same service and shows badges in a profile section and a Badges profile tab (with the badge artwork as images). Ported surface: fetch, ui.addProfileSection, ui.addProfileTab.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=351.1"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Wolfie",
+      "original_author_url": "https://wolfies.org/",
+      "implementation_status": "IMPLEMENTED"
+    },
+    {
+      "original_id": "palmdevs.hide-blocked-messages",
+      "original_name": "Hide Blocked Messages",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "hide-blocked-messages",
+      "source_reference": ".vendor/vc-plugins/plugins/hide-blocked-messages/manifest.json",
+      "target_id": "phoenix.hide-blocked-messages",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "Hidden at the gateway, so the messages never appear (the original hid them after receipt). Reply detection only works when the referenced message is in the payload.",
+      "notes": "Drops messages from blocked/ignored users in a gateway before-hook; relationships are read from `/users/@me/relationships`. Ported surface: gateway.messageCreate (hook before), discord.get.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Palm",
+      "original_author_url": "https://github.com/sponsors/PalmDevs",
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "bleelblep.hide-call-buttons",
+      "original_name": "Hide Call Buttons",
+      "original_author": "bleelblep",
+      "original_version": "1.0.0",
+      "source_dir": "hide-call-buttons",
+      "source_reference": ".vendor/vc-plugins/plugins/hide-call-buttons/manifest.json",
+      "target_id": "phoenix.hide-call-buttons",
+      "compatibility": "B",
+      "status": "IMPLEMENTED",
+      "missing_functionality": "Profile call/video buttons, DM header call buttons, friends-list call buttons and voice-channel buttons cannot be targeted.",
+      "notes": "Hides the surfaces Phoenix exposes accessibility ids for (composer voice button, header search). Ported surface: ui.hide.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=350.2"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "bleelblep",
+      "original_author_url": null,
+      "implementation_status": "IMPLEMENTED"
+    },
+    {
+      "original_id": "palmdevs.join-as-lurker",
+      "original_name": "Join as Lurker",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "join-as-lurker",
+      "source_reference": ".vendor/vc-plugins/plugins/join-as-lurker/manifest.json",
+      "target_id": "phoenix.join-as-lurker",
+      "compatibility": "C",
+      "status": "BLOCKED",
+      "missing_functionality": "No invite or guild-join flow API, and no way to select lurker mode.",
+      "notes": "Requires patching joinGuild/acceptInvite. Phoenix does not expose the join flow.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "Palm",
+      "original_author_url": "https://github.com/sponsors/PalmDevs",
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "dev.tralwdwdd.jump-to-top",
+      "original_name": "Jump To Top",
+      "original_author": "tralwdwdd",
+      "original_version": "1.0.0",
+      "source_dir": "jump-to-top",
+      "source_reference": ".vendor/vc-plugins/plugins/jump-to-top/manifest.json",
+      "target_id": "phoenix.jump-to-top",
+      "compatibility": "C",
+      "status": "BLOCKED",
+      "missing_functionality": "No chat scroll control API.",
+      "notes": "Requires patching the jump-to-present button and chat scroller. Phoenix has no scroll target.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        },
+        "dev.tralwdwd.action-sheet-patcher": {
+          "version": ">=1.0.0"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "tralwdwdd",
+      "original_author_url": "https://github.com/tralwdwd",
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "palmdevs.link-alert-copy",
+      "original_name": "Link Alert Copy",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "link-alert-copy",
+      "source_reference": ".vendor/vc-plugins/plugins/link-alert-copy/manifest.json",
+      "target_id": "phoenix.link-alert-copy",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "Cannot add a button to Discord's alert.",
+      "notes": "Copies the link when the alert's press is observed, and offers a message action that copies a link with no alert at all. Ported surface: ui.onEvent (intercept), ui.addMessageAction, ui.copy.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Palm",
+      "original_author_url": "https://github.com/sponsors/PalmDevs",
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "palmdevs.mention-avatars",
+      "original_name": "Mention Avatars",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "mention-avatars",
+      "source_reference": ".vendor/vc-plugins/plugins/mention-avatars/manifest.json",
+      "target_id": "phoenix.mention-avatars",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "No inline images inside message text.",
+      "notes": "Names mentioners in a header accessory and opens a page listing each mentioned user with their avatar URL. Ported surface: ui.addMessageAccessory, ui.addMessageAction, ui.openPage.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Palm",
+      "original_author_url": "https://github.com/sponsors/PalmDevs",
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "palmdevs.message-link-preview",
+      "original_name": "Message Link Preview",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "message-link-preview",
+      "source_reference": ".vendor/vc-plugins/plugins/message-link-preview/manifest.json",
+      "target_id": "phoenix.message-link-preview",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "Previews are text-only, not interactive rows. No inline height limit or tap-to-react.",
+      "notes": "Shows a compact `\u21b3 author: text` preview per link, cached for five minutes, plus a page with the full text of every linked message. Ported surface: ui.addMessageAccessory, ui.addMessageAction, discord.get.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Palm",
+      "original_author_url": "https://github.com/sponsors/PalmDevs",
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "palmdevs.message-logger",
+      "original_name": "Message Logger",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "message-logger",
+      "source_reference": ".vendor/vc-plugins/plugins/message-logger/manifest.json",
+      "target_id": "phoenix.message-logger",
+      "compatibility": "A",
+      "status": "IMPLEMENTED",
+      "missing_functionality": "",
+      "notes": "Gateway hooks keep message state in memory; two message accessories show edit history and a red `Deleted \u00b7 HH:MM` marker. Deletes of known messages are dropped from the client handler so they stay on screen. Ported surface: gateway.messageCreate/Update/Delete/DeleteBulk (hook before), ui.addMessageAccessory, Remover.update.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Palm",
+      "original_author_url": "https://github.com/sponsors/PalmDevs",
+      "implementation_status": "IMPLEMENTED"
+    },
+    {
+      "original_id": "thororen.no-embed-copy",
+      "original_name": "No Embed Copy",
+      "original_author": "thororen",
+      "original_version": "1.0.0",
+      "source_dir": "no-embed-copy",
+      "source_reference": ".vendor/vc-plugins/plugins/no-embed-copy/manifest.json",
+      "target_id": "phoenix.no-embed-copy",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "Discord still opens the link after the copy. Only works when the press event carries the URL.",
+      "notes": "Copies the embed URL on an embed press (the press is passed back to Discord) and offers `Copy embed link` in the message menu. Ported surface: ui.onEvent (intercept), ui.addMessageAction, ui.copy.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "thororen",
+      "original_author_url": "https://www.thororen.com",
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "k1ngop.no-idle",
+      "original_name": "No Idle",
+      "original_author": "k1ng_op",
+      "original_version": "1.0.0",
+      "source_dir": "no-idle",
+      "source_reference": ".vendor/vc-plugins/plugins/no-idle/manifest.json",
+      "target_id": "phoenix.no-idle",
+      "compatibility": "C",
+      "status": "BLOCKED",
+      "missing_functionality": "No presence/IDLE gateway event and no way to set presence.",
+      "notes": "Requires clearing the idle flag on the IDLE dispatch. Phoenix exposes no presence API; ui.onEvent only covers view events.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "k1ng_op",
+      "original_author_url": null,
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "thororen.nsfw-blur",
+      "original_name": "NSFW Blur",
+      "original_author": "thororen",
+      "original_version": "1.0.0",
+      "source_dir": "nsfw-blur",
+      "source_reference": ".vendor/vc-plugins/plugins/nsfw-blur/manifest.json",
+      "target_id": "phoenix.nsfw-blur",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "No image blur: media is hidden, not blurred. Hiding is global, not per NSFW channel.",
+      "notes": "Hides media rows with `ui.hide`, and can drop messages with attachments in NSFW channels at the gateway. NSFW channels come from the read-only cache. Ported surface: ui.hide, stores.sql, gateway.messageCreate (hook before).",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "thororen",
+      "original_author_url": "https://www.thororen.com",
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "dev.cocobo1.petpet",
+      "original_name": "PetPet",
+      "original_author": "cocobo1",
+      "original_version": "1.0.2",
+      "source_dir": "petpet",
+      "source_reference": ".vendor/vc-plugins/plugins/petpet/manifest.json",
+      "target_id": "phoenix.petpet",
+      "compatibility": "B",
+      "status": "IMPLEMENTED",
+      "missing_functionality": "Cannot upload the GIF as an attachment: Phoenix has no file-module or multipart API.",
+      "notes": "`/petpet` resolves the target's avatar and posts the generated image URL, which Discord unfurls. Same command, same service. Ported surface: commands.register, discord.get, onSend-free.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        },
+        "dev.cocobo1.command-lib": {
+          "version": ">=2 <3"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "cocobo1",
+      "original_author_url": "https://cocobo1.dev",
+      "implementation_status": "IMPLEMENTED"
+    },
+    {
+      "original_id": "palmdevs.reactions-sheet-fix",
+      "original_name": "Reactions Sheet Fix",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "reactions-sheet-fix",
+      "source_reference": ".vendor/vc-plugins/plugins/reactions-sheet-fix/manifest.json",
+      "target_id": "phoenix.reactions-sheet-fix",
+      "compatibility": "E",
+      "status": "BLOCKED",
+      "missing_functionality": "The fix targets MessageReactionsStore internals and Dispatcher.dispatch, neither of which Phoenix exposes; Phoenix's own reactions sheet cannot be observed from a plugin.",
+      "notes": "Classification checked against crates/runtime: no Flux, no reaction store. The who-reacted port covers reading reactors on demand.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "Palm",
+      "original_author_url": "https://github.com/sponsors/PalmDevs",
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "dev.nexza.read-all-notifications",
+      "original_name": "Read All Notifications",
+      "original_author": "NexzaDev",
+      "original_version": "1.0.1",
+      "source_dir": "read-all-notifications",
+      "source_reference": ".vendor/vc-plugins/plugins/read-all-notifications/manifest.json",
+      "target_id": "phoenix.read-all-notifications",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "Cannot add a button under the DMs. Unread discovery depends on Phoenix's cache schema. Threads are not enumerated separately.",
+      "notes": "Header button and `/read-all` ack unread channels through `POST /channels/:id/ack`, with an optional confirmation. Ported surface: stores.sql, discord.post, ui.choose, ui.addHeaderButton, commands.register.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "NexzaDev",
+      "original_author_url": "https://github.com/NexzaDev",
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "dev.tralwdwdd.search-action-sheet",
+      "original_name": "Search Action Sheet",
+      "original_author": "tralwdwdd",
+      "original_version": "1.0.0",
+      "source_dir": "search-action-sheet",
+      "source_reference": ".vendor/vc-plugins/plugins/search-action-sheet/manifest.json",
+      "target_id": "phoenix.search-action-sheet",
+      "compatibility": "C",
+      "status": "BLOCKED",
+      "missing_functionality": "No search results UI patch API.",
+      "notes": "Requires patching search list rows and message action sheet. Phoenix has no search target.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        },
+        "dev.tralwdwd.action-sheet-patcher": {
+          "version": ">=1.0.0"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "tralwdwdd",
+      "original_author_url": "https://github.com/tralwdwd",
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "dev.loki-vtx.selectablebios",
+      "original_name": "Selectable Bios",
+      "original_author": "Loki-vtx",
+      "original_version": "1.0.0",
+      "source_dir": "selectable-bios",
+      "source_reference": ".vendor/vc-plugins/plugins/selectable-bios/manifest.json",
+      "target_id": "phoenix.selectable-bios",
+      "compatibility": "B",
+      "status": "IMPLEMENTED",
+      "missing_functionality": "Text inside Discord's own bio view is still not selectable.",
+      "notes": "Adds a Bio profile tab that shows the bio with a Copy button. Ported surface: ui.addProfileTab, discord.get.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Loki-vtx",
+      "original_author_url": "https://github.com/Loki-vtx",
+      "implementation_status": "IMPLEMENTED"
+    },
+    {
+      "original_id": "valenced.settings.themes",
+      "original_name": "Themes",
+      "original_author": "Valenced",
+      "original_version": "1.0.0",
+      "source_dir": "settings.themes",
+      "source_reference": ".vendor/vc-plugins/plugins/settings.themes/manifest.json",
+      "target_id": "phoenix.settings.themes",
+      "compatibility": "E",
+      "status": "BLOCKED",
+      "missing_functionality": "No theme settings system; depends on Valenced Themes API + native.",
+      "notes": "Theme configuration UI for Valenced Themes API. Phoenix has no plugin theme system.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        },
+        "valenced.settings": {},
+        "valenced.api.themes": {
+          "version": ">=1 <2"
+        },
+        "valenced.settings.plugins": {}
+      },
+      "test_status": "N/A",
+      "original_author_name": "Valenced",
+      "original_author_url": null,
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "palmdevs.shiki-codeblocks",
+      "original_name": "Shiki Codeblocks",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "shiki-codeblocks",
+      "source_reference": ".vendor/vc-plugins/plugins/shiki-codeblocks/manifest.json",
+      "target_id": "phoenix.shiki-codeblocks",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "No inline highlighted code in chat. Shiki theme selection is not ported (Phoenix chooses the theme).",
+      "notes": "`View highlighted` message action opens every code block in Phoenix's own syntax-highlighting viewer. Ported surface: ui.addMessageAction, ui.openPage (highlight).",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Palm",
+      "original_author_url": "https://github.com/sponsors/PalmDevs",
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "bleelblep.show-tag",
+      "original_name": "Show Tag",
+      "original_author": "bleelblep",
+      "original_version": "1.0.0",
+      "source_dir": "show-tag",
+      "source_reference": ".vendor/vc-plugins/plugins/show-tag/manifest.json",
+      "target_id": "phoenix.show-tag",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "Cannot change the message row itself. Nicknames are not exposed to accessories (global name is used).",
+      "notes": "Emits the same text from a header message accessory. Ported surface: ui.addMessageAccessory placement: header.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=350.2"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "bleelblep",
+      "original_author_url": null,
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "palmdevs.show-timeout-duration",
+      "original_name": "Show Timeout Duration",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "show-timeout-duration",
+      "source_reference": ".vendor/vc-plugins/plugins/show-timeout-duration/manifest.json",
+      "target_id": "phoenix.show-timeout-duration",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "A snapshot per message, not a live countdown. Cannot recolour the username row.",
+      "notes": "Captures `communication_disabled_until` from the gateway and shows `timeout 3h 20m left` as a header accessory. Ported surface: gateway.messageCreate (on + hook after), ui.addMessageAccessory.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Palm",
+      "original_author_url": "https://github.com/sponsors/PalmDevs",
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "palmdevs.silent-typing",
+      "original_name": "Silent Typing",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "silent-typing",
+      "source_reference": ".vendor/vc-plugins/plugins/silent-typing/manifest.json",
+      "target_id": "phoenix.silent-typing",
+      "compatibility": "A",
+      "status": "IMPLEMENTED",
+      "missing_functionality": "",
+      "notes": "Drops Discord's `POST /channels/:id/typing` request before it leaves the device. Ported surface: discord.onRequest.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Palm",
+      "original_author_url": "https://github.com/sponsors/PalmDevs",
+      "implementation_status": "IMPLEMENTED"
+    },
+    {
+      "original_id": "wolfie.sound-controls",
+      "original_name": "Sound Controls",
+      "original_author": "Wolfie",
+      "original_version": "1.0.0",
+      "source_dir": "sound-controls",
+      "source_reference": ".vendor/vc-plugins/plugins/sound-controls/manifest.json",
+      "target_id": "phoenix.sound-controls",
+      "compatibility": "C",
+      "status": "BLOCKED",
+      "missing_functionality": "No Discord sound system patch API.",
+      "notes": "Requires patching MobileAudioSound play/loop. Phoenix Voice host module controls Phoenix sounds, not Discord's.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "Wolfie",
+      "original_author_url": "https://wolfies.org/",
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "thororen.tenor-gif-fix",
+      "original_name": "Tenor GIF Fix",
+      "original_author": "thororen",
+      "original_version": "1.0.0",
+      "source_dir": "tenor-gif-fix",
+      "source_reference": ".vendor/vc-plugins/plugins/tenor-gif-fix/manifest.json",
+      "target_id": "phoenix.tenor-gif-fix",
+      "compatibility": "B",
+      "status": "IMPLEMENTED",
+      "missing_functionality": "Downloads and shares cannot be intercepted: no media manager.",
+      "notes": "Rewrites Tenor links in outgoing messages and offers `Copy as GIF link` on any message that contains one, using the original's URL algorithm. Ported surface: messages.onSend, ui.addMessageAction, ui.copy.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "thororen",
+      "original_author_url": "https://www.thororen.com",
+      "implementation_status": "IMPLEMENTED"
+    },
+    {
+      "original_id": "palmdevs.tenor-gif-search",
+      "original_name": "Tenor GIF Search",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "tenor-gif-search",
+      "source_reference": ".vendor/vc-plugins/plugins/tenor-gif-search/manifest.json",
+      "target_id": "phoenix.tenor-gif-search",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "The GIF picker still uses Discord's provider. No grid preview: results are a list of buttons.",
+      "notes": "`/tenor <query>` searches the same API and lists results in a page; picking one copies the GIF link for the composer. Ported surface: commands.register, fetch, ui.openPage, ui.copy.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Palm",
+      "original_author_url": "https://github.com/sponsors/PalmDevs",
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "valenced.themes.legacy",
+      "original_name": "Legacy Themes",
+      "original_author": "Valenced",
+      "original_version": "1.0.0",
+      "source_dir": "themes.legacy",
+      "source_reference": ".vendor/vc-plugins/plugins/themes.legacy/manifest.json",
+      "target_id": "phoenix.themes.legacy",
+      "compatibility": "E",
+      "status": "BLOCKED",
+      "missing_functionality": "Depends on Valenced Themes API; no Phoenix theme system.",
+      "notes": "Legacy theme importer for Valenced Themes API. No Phoenix equivalent.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        },
+        "valenced.api.themes": {
+          "version": ">=1 <2"
+        },
+        "valenced.settings.themes": {}
+      },
+      "test_status": "N/A",
+      "original_author_name": "Valenced",
+      "original_author_url": null,
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "k1ngop.valid-user",
+      "original_name": "ValidUser",
+      "original_author": "k1ng_op",
+      "original_version": "1.0.0",
+      "source_dir": "valid-user",
+      "source_reference": ".vendor/vc-plugins/plugins/valid-user/manifest.json",
+      "target_id": "phoenix.valid-user",
+      "compatibility": "C",
+      "status": "BLOCKED",
+      "missing_functionality": "No message rendering or store patch API for @unknown-user resolution.",
+      "notes": "Requires patching Alerts, Clipboard, HTTP and dispatching USER_UPDATE. Phoenix has no equivalent.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "N/A",
+      "original_author_name": "k1ng_op",
+      "original_author_url": "https://github.com/k1ng0p",
+      "implementation_status": "BLOCKED"
+    },
+    {
+      "original_id": "palmdevs.who-reacted",
+      "original_name": "Who Reacted",
+      "original_author": "Palm",
+      "original_version": "1.0.0",
+      "source_dir": "who-reacted",
+      "source_reference": ".vendor/vc-plugins/plugins/who-reacted/manifest.json",
+      "target_id": "phoenix.who-reacted",
+      "compatibility": "D",
+      "status": "PARTIAL",
+      "missing_functionality": "On demand, not drawn on the pill. No avatars, since pages show text and buttons.",
+      "notes": "`Who reacted` message action fetches reactors per reaction and lists them in a page, newest counts included. Ported surface: ui.addMessageAction, discord.get, ui.openPage.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Palm",
+      "original_author_url": "https://github.com/sponsors/PalmDevs",
+      "implementation_status": "PARTIAL"
+    },
+    {
+      "original_id": "purpleeyez.youbar-plus",
+      "original_name": "YouBar+",
+      "original_author": "Purple_\u039eye\u2122",
+      "original_version": "1.0.0",
+      "source_dir": "youbar-plus",
+      "source_reference": ".vendor/vc-plugins/plugins/youbar-plus/manifest.json",
+      "target_id": "phoenix.youbar-plus",
+      "compatibility": "B",
+      "status": "IMPLEMENTED",
+      "missing_functionality": "Cannot open Settings, Favorites or the DM list directly: no navigation API.",
+      "notes": "Adds the same three shortcuts as chat header buttons; each reports where the screen lives, since plugins cannot push Discord's navigator. Ported surface: ui.addHeaderButton, settings onChange.",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "test_status": "MOCK_PASSED",
+      "original_author_name": "Purple_\u039eye\u2122",
+      "original_author_url": "https://github.com/Purple-EyeZ",
+      "implementation_status": "IMPLEMENTED"
+    }
+  ],
+  "ported": 28,
+  "legend": {
+    "compatibility": {
+      "A": "directly portable",
+      "B": "adaptable",
+      "C": "requires additional Phoenix capabilities",
+      "D": "partially portable",
+      "E": "incompatible"
+    },
+    "implementation_status": [
+      "NOT_STARTED",
+      "DISCOVERED",
+      "ANALYZED",
+      "IMPLEMENTING",
+      "IMPLEMENTED",
+      "BUILD_PASSED",
+      "TESTING",
+      "VERIFIED",
+      "PARTIAL",
+      "BLOCKED"
+    ],
+    "test_status": {
+      "MOCK_PASSED": "loads, registers, handles payloads and unloads in the mock runtime (scripts/test.mjs)",
+      "DEVICE_PASSED": "observed working in Phoenix Unlock on a device",
+      "N/A": "no implementation"
+    },
+    "note": "No plugin is marked VERIFIED: device testing was not possible in the build environment. See migration/report.md."
+  }
+}

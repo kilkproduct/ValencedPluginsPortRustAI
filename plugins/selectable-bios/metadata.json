@@ -1,0 +1,20 @@
+{
+  "name": "selectable-bios",
+  "target_id": "phoenix.selectable-bios",
+  "description": "Copy profile bios as text",
+  "version": "1.0.0",
+  "original": {
+    "id": "dev.loki-vtx.selectablebios",
+    "name": "Selectable Bios",
+    "author": "Loki-vtx",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/selectable-bios"
+  },
+  "compatibility": "B",
+  "status": "IMPLEMENTED",
+  "phoenix_api": [
+    "ui.addProfileTab",
+    "discord.get"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

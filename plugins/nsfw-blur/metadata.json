@@ -1,0 +1,21 @@
+{
+  "name": "nsfw-blur",
+  "target_id": "phoenix.nsfw-blur",
+  "description": "Blur NSFW media in NSFW channels",
+  "version": "1.0.0",
+  "original": {
+    "id": "thororen.nsfw-blur",
+    "name": "NSFW Blur",
+    "author": "thororen",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/nsfw-blur"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "ui.hide",
+    "stores.sql",
+    "gateway.messageCreate (hook before)"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "shiki-codeblocks",
+  "target_id": "phoenix.shiki-codeblocks",
+  "description": "View code blocks in chat with syntax highlighting",
+  "version": "1.0.0",
+  "original": {
+    "id": "palmdevs.shiki-codeblocks",
+    "name": "Shiki Codeblocks",
+    "author": "Palm",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/shiki-codeblocks"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "ui.addMessageAction",
+    "ui.openPage (highlight)"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

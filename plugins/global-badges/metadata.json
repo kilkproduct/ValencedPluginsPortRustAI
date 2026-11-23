@@ -1,0 +1,21 @@
+{
+  "name": "global-badges",
+  "target_id": "phoenix.global-badges",
+  "description": "Show profile badges from other client mods",
+  "version": "1.0.0",
+  "original": {
+    "id": "wolfie.global-badges",
+    "name": "Global Badges",
+    "author": "Wolfie",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/global-badges"
+  },
+  "compatibility": "B",
+  "status": "IMPLEMENTED",
+  "phoenix_api": [
+    "fetch",
+    "ui.addProfileSection",
+    "ui.addProfileTab"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

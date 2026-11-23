@@ -1,0 +1,753 @@
+{
+  "source": "Valenced Community Plugins",
+  "note": "Dependency graph of the source catalogue, and how each dependency is handled by the port.",
+  "plugins": [
+    {
+      "source_dir": "action-sheet-patcher",
+      "original_id": "dev.tralwdwd.action-sheet-patcher",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "add-attachments",
+      "original_id": "wolfie.add-attachments",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "anonymous-file-names",
+      "original_id": "k1ngop.anonymous-file-names",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "api.themes",
+      "original_id": "valenced.api.themes",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "better-chat-buttons",
+      "original_id": "palmdevs.better-chat-buttons",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=350.2"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "source_dir": "better-typing-indicators",
+      "original_id": "palmdevs.better-typing-indicators",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "block-youtube-ads",
+      "original_id": "palmdevs.block-youtube-ads",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "bluetooth-audio-fix",
+      "original_id": "mxtiy.audiofix",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "character-counter",
+      "original_id": "thororen.character-counter",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "clear-urls",
+      "original_id": "hakuxyz.clear-urls",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "source_dir": "cocos-command-lib",
+      "original_id": "dev.cocobo1.command-lib",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "dashless",
+      "original_id": "k1ngop.dashless",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "developer-kit",
+      "original_id": "valenced.developer-kit",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=350.4"
+        },
+        "valenced.settings": {
+          "version": "*",
+          "optional": true
+        },
+        "valenced.api.hidden": {
+          "version": "*",
+          "optional": true
+        }
+      },
+      "runtime_dependencies": [
+        "valenced.settings",
+        "valenced.api.hidden"
+      ],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "disable-call-idle",
+      "original_id": "k1ngop.disable-call-idle",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "fake-nitro",
+      "original_id": "palmdevs.fake-nitro",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "favorite-anything",
+      "original_id": "theunrealzaka.favorite-anything",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "file-size-on-picker",
+      "original_id": "contrabag.file-size-on-picker",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "gif-to-chat-input",
+      "original_id": "dev.benjii.gtci",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "global-badges",
+      "original_id": "wolfie.global-badges",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=351.1"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "source_dir": "hide-blocked-messages",
+      "original_id": "palmdevs.hide-blocked-messages",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "hide-call-buttons",
+      "original_id": "bleelblep.hide-call-buttons",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=350.2"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "source_dir": "join-as-lurker",
+      "original_id": "palmdevs.join-as-lurker",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "jump-to-top",
+      "original_id": "dev.tralwdwdd.jump-to-top",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        },
+        "dev.tralwdwd.action-sheet-patcher": {
+          "version": ">=1.0.0"
+        }
+      },
+      "runtime_dependencies": [
+        "dev.tralwdwd.action-sheet-patcher"
+      ],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "link-alert-copy",
+      "original_id": "palmdevs.link-alert-copy",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "mention-avatars",
+      "original_id": "palmdevs.mention-avatars",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "message-link-preview",
+      "original_id": "palmdevs.message-link-preview",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "message-logger",
+      "original_id": "palmdevs.message-logger",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "source_dir": "no-embed-copy",
+      "original_id": "thororen.no-embed-copy",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "no-idle",
+      "original_id": "k1ngop.no-idle",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "nsfw-blur",
+      "original_id": "thororen.nsfw-blur",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "petpet",
+      "original_id": "dev.cocobo1.petpet",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        },
+        "dev.cocobo1.command-lib": {
+          "version": ">=2 <3"
+        }
+      },
+      "runtime_dependencies": [
+        "dev.cocobo1.command-lib"
+      ],
+      "resolution": "library dependency collapsed into the port",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "source_dir": "reactions-sheet-fix",
+      "original_id": "palmdevs.reactions-sheet-fix",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "read-all-notifications",
+      "original_id": "dev.nexza.read-all-notifications",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "search-action-sheet",
+      "original_id": "dev.tralwdwdd.search-action-sheet",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        },
+        "dev.tralwdwd.action-sheet-patcher": {
+          "version": ">=1.0.0"
+        }
+      },
+      "runtime_dependencies": [
+        "dev.tralwdwd.action-sheet-patcher"
+      ],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "selectable-bios",
+      "original_id": "dev.loki-vtx.selectablebios",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "source_dir": "settings.themes",
+      "original_id": "valenced.settings.themes",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        },
+        "valenced.settings": {},
+        "valenced.api.themes": {
+          "version": ">=1 <2"
+        },
+        "valenced.settings.plugins": {}
+      },
+      "runtime_dependencies": [
+        "valenced.settings",
+        "valenced.api.themes",
+        "valenced.settings.plugins"
+      ],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "shiki-codeblocks",
+      "original_id": "palmdevs.shiki-codeblocks",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "show-tag",
+      "original_id": "bleelblep.show-tag",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=350.2"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "show-timeout-duration",
+      "original_id": "palmdevs.show-timeout-duration",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "silent-typing",
+      "original_id": "palmdevs.silent-typing",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "source_dir": "sound-controls",
+      "original_id": "wolfie.sound-controls",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "tenor-gif-fix",
+      "original_id": "thororen.tenor-gif-fix",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "IMPLEMENTED"
+    },
+    {
+      "source_dir": "tenor-gif-search",
+      "original_id": "palmdevs.tenor-gif-search",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "themes.legacy",
+      "original_id": "valenced.themes.legacy",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        },
+        "valenced.api.themes": {
+          "version": ">=1 <2"
+        },
+        "valenced.settings.themes": {}
+      },
+      "runtime_dependencies": [
+        "valenced.api.themes",
+        "valenced.settings.themes"
+      ],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "valid-user",
+      "original_id": "k1ngop.valid-user",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "depends on a library plugin with no Phoenix equivalent",
+      "status": "BLOCKED"
+    },
+    {
+      "source_dir": "who-reacted",
+      "original_id": "palmdevs.who-reacted",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": ">=352.2"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "PARTIAL"
+    },
+    {
+      "source_dir": "youbar-plus",
+      "original_id": "purpleeyez.youbar-plus",
+      "dependencies": {
+        "valenced.api": {
+          "version": ">=1 <2"
+        },
+        "discord": {
+          "version": "*"
+        }
+      },
+      "runtime_dependencies": [],
+      "resolution": "ported as a standalone plugin: no runtime dependency needed",
+      "status": "IMPLEMENTED"
+    }
+  ]
+}

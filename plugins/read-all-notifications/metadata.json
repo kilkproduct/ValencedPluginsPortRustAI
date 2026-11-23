@@ -1,0 +1,23 @@
+{
+  "name": "read-all-notifications",
+  "target_id": "phoenix.read-all-notifications",
+  "description": "Mark every unread channel as read in one tap",
+  "version": "1.0.0",
+  "original": {
+    "id": "dev.nexza.read-all-notifications",
+    "name": "Read All Notifications",
+    "author": "NexzaDev",
+    "version": "1.0.1",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/read-all-notifications"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "stores.sql",
+    "discord.post",
+    "ui.choose",
+    "ui.addHeaderButton",
+    "commands.register"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

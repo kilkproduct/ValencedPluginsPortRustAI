@@ -1,0 +1,176 @@
+{
+  "kind": "mock-runtime behavioural test (not a device test)",
+  "harness": "scripts/test.mjs",
+  "passed": 28,
+  "failed": 0,
+  "results": [
+    {
+      "name": "better-chat-buttons",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=0 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=2 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "better-typing-indicators",
+      "status": "PASS",
+      "summary": "hooks=1 observers=1 accessory=1 action=0 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "character-counter",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=0 header=0 composer=1 profile=0+0 cmd=0 onSend=1 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "clear-urls",
+      "status": "PASS",
+      "summary": "hooks=2 observers=0 accessory=0 action=1 header=0 composer=0 profile=0+0 cmd=0 onSend=1 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "dashless",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=1 action=0 header=1 composer=0 profile=0+0 cmd=1 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "fake-nitro",
+      "status": "PASS",
+      "summary": "hooks=0 observers=4 accessory=0 action=0 header=0 composer=0 profile=0+0 cmd=0 onSend=1 onEmojiPick=1 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "favorite-anything",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=1 action=1 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "gif-to-chat-input",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=0 header=0 composer=1 profile=0+0 cmd=1 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "global-badges",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=0 header=0 composer=0 profile=1+1 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "hide-blocked-messages",
+      "status": "PASS",
+      "summary": "hooks=1 observers=0 accessory=0 action=0 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "hide-call-buttons",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=0 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=1 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "link-alert-copy",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=1 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=1 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "mention-avatars",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=1 action=1 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "message-link-preview",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=1 action=1 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "message-logger",
+      "status": "PASS",
+      "summary": "hooks=4 observers=0 accessory=2 action=0 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "no-embed-copy",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=1 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=1 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "nsfw-blur",
+      "status": "PASS",
+      "summary": "hooks=1 observers=0 accessory=0 action=0 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=2 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "petpet",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=0 header=0 composer=0 profile=0+0 cmd=1 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "read-all-notifications",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=0 header=1 composer=0 profile=0+0 cmd=1 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "selectable-bios",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=0 header=0 composer=0 profile=0+1 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "shiki-codeblocks",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=1 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "show-tag",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=1 action=0 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "show-timeout-duration",
+      "status": "PASS",
+      "summary": "hooks=1 observers=1 accessory=1 action=0 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "silent-typing",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=0 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=1",
+      "expectations": "asserted"
+    },
+    {
+      "name": "tenor-gif-fix",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=1 header=0 composer=0 profile=0+0 cmd=0 onSend=1 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "tenor-gif-search",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=0 header=0 composer=0 profile=0+0 cmd=1 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "who-reacted",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=1 header=0 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    },
+    {
+      "name": "youbar-plus",
+      "status": "PASS",
+      "summary": "hooks=0 observers=0 accessory=0 action=0 header=1 composer=0 profile=0+0 cmd=0 onSend=0 onEmojiPick=0 hides=0 viewEvents=0 req=0",
+      "expectations": "asserted"
+    }
+  ]
+}

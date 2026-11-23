@@ -1,0 +1,1799 @@
+[
+  {
+    "dir": "action-sheet-patcher",
+    "id": "dev.tralwdwd.action-sheet-patcher",
+    "name": "tralwdwd's action sheet patcher library",
+    "description": "Provides a library to easily patch action sheets.",
+    "author": "tralwdwdd",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "FileIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/index.ts",
+      "js/patches/index.ts",
+      "js/patches/utils.ts"
+    ],
+    "original_author_name": "tralwdwdd",
+    "original_author_url": "https://github.com/tralwdwd"
+  },
+  {
+    "dir": "add-attachments",
+    "id": "wolfie.add-attachments",
+    "name": "Add Attachments",
+    "description": "Add new attachments when editing messages.",
+    "author": "Wolfie",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "PencilSparkleIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "index.ts",
+      "tsconfig.json",
+      "upload.ts"
+    ],
+    "original_author_name": "Wolfie",
+    "original_author_url": "https://wolfies.org/"
+  },
+  {
+    "dir": "anonymous-file-names",
+    "id": "k1ngop.anonymous-file-names",
+    "name": "Anonymous File Names",
+    "description": "Randomizes file names before you upload them.",
+    "author": "k1ng_op",
+    "contributors": [
+      "siguma",
+      "Palm <629368283354628116> (https://github.com/sponsors/PalmDevs \"Donations\") (https://palmdevs.me \"Website\") (https://github.com/PalmDevs \"GitHub\")"
+    ],
+    "version": "1.0.0",
+    "icon": "UnknownGameIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/index.ts",
+      "js/settings.tsx"
+    ],
+    "original_author_name": "k1ng_op",
+    "original_author_url": null
+  },
+  {
+    "dir": "api.themes",
+    "id": "valenced.api.themes",
+    "name": "Themes API",
+    "description": "Lets theme plugins provide color themes, font packs, icon packs, and emoji packs.",
+    "author": "Valenced",
+    "contributors": [
+      "Palm <629368283354628116> (https://github.com/sponsors/PalmDevs \"Donations\") (https://palmdevs.me \"Website\") (https://github.com/PalmDevs \"GitHub\")",
+      "Ushie <399862294143696897> (https://github.com/Ushie \"GitHub\")",
+      "cocobo1 <767650984175992833> (https://github.com/C0C0B01 \"GitHub\")"
+    ],
+    "version": "1.0.1",
+    "icon": "PaintPaletteIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": ">=352.2"
+      }
+    },
+    "dist": {
+      "script": "index.js",
+      "android": {
+        "path": "plugin.jar",
+        "class": "app.valenced.themes.ThemesPlugin"
+      }
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "package.json",
+      "tsconfig.json",
+      "js/api.d.ts",
+      "js/background.tsx",
+      "js/index.ts",
+      "js/colors.ts",
+      "js/hidden.d.ts",
+      "js/native.ts",
+      "js/store.ts",
+      "js/types.ts",
+      "scripts/build-types.ts",
+      "scripts/tsconfig.json",
+      "src/main/kotlin/app/valenced/themes/Colors.kt",
+      "src/main/kotlin/app/valenced/themes/Emoji.kt",
+      "src/main/kotlin/app/valenced/themes/Fonts.kt",
+      "src/main/kotlin/app/valenced/themes/Hooks.kt",
+      "src/main/kotlin/app/valenced/themes/Icons.kt",
+      "src/main/kotlin/app/valenced/themes/ThemesPlugin.kt",
+      "src/main/kotlin/app/valenced/themes/ThemesState.kt",
+      "src/test/kotlin/app/valenced/themes/EmojiTest.kt",
+      "src/test/kotlin/app/valenced/themes/ThemesHelpersTest.kt",
+      "types-package/README.md"
+    ],
+    "original_author_name": "Valenced",
+    "original_author_url": null
+  },
+  {
+    "dir": "better-chat-buttons",
+    "id": "palmdevs.better-chat-buttons",
+    "name": "Better Chat Buttons",
+    "description": "Hiding all annoying chat buttons, or making them never collapse, all configurable.",
+    "author": "Palm",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "ChatCheckIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": ">=350.2"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/index.tsx",
+      "js/settings.tsx"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://github.com/sponsors/PalmDevs"
+  },
+  {
+    "dir": "better-typing-indicators",
+    "id": "palmdevs.better-typing-indicators",
+    "name": "Better Typing Indicators",
+    "description": "Typing indicator in channels, with user avatars, tap to open profile, and more.",
+    "author": "Palm",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "SuperReactionIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": ">=352.2"
+      }
+    },
+    "dist": {
+      "script": "index.js",
+      "android": {
+        "path": "plugin.jar",
+        "class": "me.palmdevs.valenced.bettertypingindicators.BetterTypingIndicators"
+      }
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/components.tsx",
+      "js/index.tsx",
+      "js/native.ts",
+      "js/settings.tsx",
+      "js/shared.react.ts",
+      "js/shared.ts",
+      "src/main/kotlin/me/palmdevs/valenced/bettertypingindicators/BetterTypingIndicators.kt",
+      "src/main/kotlin/me/palmdevs/valenced/bettertypingindicators/ChatListSpacing.kt"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://github.com/sponsors/PalmDevs"
+  },
+  {
+    "dir": "block-youtube-ads",
+    "id": "palmdevs.block-youtube-ads",
+    "name": "Block YouTube Ads",
+    "description": "Blocks ads in YouTube videos played inside the app, using AdGuard's script.",
+    "author": "Palm",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "YoutubeNeutralIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "android": {
+        "path": "plugin.jar",
+        "class": "me.palmdevs.valenced.blockyoutubeads.BlockYouTubeAds"
+      }
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "assets/adguard.js",
+      "src/main/kotlin/me/palmdevs/valenced/blockyoutubeads/BlockYouTubeAds.kt"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://palmdevs.me"
+  },
+  {
+    "dir": "bluetooth-audio-fix",
+    "id": "mxtiy.audiofix",
+    "name": "Bluetooth Audio Fix",
+    "description": "Prevents Discord from switching to hands-free mode during calls.",
+    "author": "NoReplyUI5",
+    "contributors": [],
+    "version": "1.0.0.1",
+    "icon": "voice_bar_bluetooth",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/index.tsx"
+    ],
+    "original_author_name": "NoReplyUI5",
+    "original_author_url": "https://github.com/NoReplyUI5"
+  },
+  {
+    "dir": "character-counter",
+    "id": "thororen.character-counter",
+    "name": "Character Counter",
+    "description": "Adds a character counter to the chat input.",
+    "author": "thororen",
+    "contributors": [
+      "creations <209830981060788225> (https://creations.works \"Website\") (https://github.com/creationsss \"GitHub\")"
+    ],
+    "version": "1.0.0",
+    "icon": "LettersIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "index.tsx",
+      "settings.tsx",
+      "shared.ts",
+      "tsconfig.json"
+    ],
+    "original_author_name": "thororen",
+    "original_author_url": "https://www.thororen.com"
+  },
+  {
+    "dir": "clear-urls",
+    "id": "hakuxyz.clear-urls",
+    "name": "Clear URLs",
+    "description": "Strips tracking parameters from URLs you view, send, or edit.",
+    "author": "hakuxyz",
+    "contributors": [
+      "nexpid <853550207039832084> (https://github.com/nexpid \"GitHub\")"
+    ],
+    "version": "1.0.0",
+    "icon": null,
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": "LICENSE",
+    "source_files": [
+      "LICENSE",
+      "NOTICE",
+      "index.tsx",
+      "settings.tsx",
+      "shared.ts",
+      "tsconfig.json"
+    ],
+    "original_author_name": "hakuxyz",
+    "original_author_url": "https://github.com/hakuxyz"
+  },
+  {
+    "dir": "cocos-command-lib",
+    "id": "dev.cocobo1.command-lib",
+    "name": "Coco's Command Lib",
+    "description": "Provides a library to make making commands easier",
+    "author": "cocobo1",
+    "contributors": [
+      "kmmiio99o <879393496627306587> (https://github.com/kmmiio99o \"GitHub\")"
+    ],
+    "version": "2.0.0",
+    "icon": "AppsIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "js/commands.ts",
+      "js/index.ts",
+      "js/modules.ts",
+      "js/types.ts",
+      "js/ui/Commands.tsx",
+      "js/ui/DonateCard.tsx",
+      "js/ui/Settings.tsx",
+      "js/ui/constants.ts"
+    ],
+    "original_author_name": "cocobo1",
+    "original_author_url": "https://cocobo1.dev"
+  },
+  {
+    "dir": "dashless",
+    "id": "k1ngop.dashless",
+    "name": "Dashless",
+    "description": "Changes dashes in text channel names to spaces.",
+    "author": "k1ng_op",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "ChannelListIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "js/index.ts"
+    ],
+    "original_author_name": "k1ng_op",
+    "original_author_url": null
+  },
+  {
+    "dir": "developer-kit",
+    "id": "valenced.developer-kit",
+    "name": "Developer Kit",
+    "description": "Tools assisting Valenced developers.",
+    "author": "Valenced",
+    "contributors": [
+      "Palm <629368283354628116> (https://palmdevs.me \"Website\") (https://github.com/PalmDevs \"GitHub\")"
+    ],
+    "version": "1.0.0",
+    "icon": "WrenchIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": ">=350.4"
+      },
+      "valenced.settings": {
+        "version": "*",
+        "optional": true
+      },
+      "valenced.api.hidden": {
+        "version": "*",
+        "optional": true
+      }
+    },
+    "dist": {
+      "script": "build/js/index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "constants.ts",
+      "index.ts",
+      "devtools.ts",
+      "react-devtools.ts",
+      "settings.ts",
+      "tsconfig.json",
+      "definitions/AssetBrowserSetting.tsx",
+      "definitions/DTAutoConnectSetting.tsx",
+      "definitions/DTConnectSetting.tsx",
+      "definitions/DTDisconnectSetting.tsx",
+      "definitions/EvalJSSetting.tsx",
+      "definitions/RDTAutoConnectSetting.tsx",
+      "definitions/RDTConnectSetting.tsx",
+      "definitions/RDTDisconnectSetting.tsx",
+      "definitions/TestErrorBoundarySetting.tsx",
+      "definitions/ValencedDeveloperSetting.tsx",
+      "screens/AssetBrowserSettingScreen.tsx",
+      "screens/EvalJSSettingScreen.tsx",
+      "screens/TestErrorBoundarySettingScreen.tsx",
+      "screens/ValencedDeveloperSettingScreen.tsx"
+    ],
+    "original_author_name": "Valenced",
+    "original_author_url": null
+  },
+  {
+    "dir": "disable-call-idle",
+    "id": "k1ngop.disable-call-idle",
+    "name": "Disable Call Idle",
+    "description": "Stop getting kicked from empty voice calls after 3 minutes.",
+    "author": "k1ng_op",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "PhoneCallIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/index.ts"
+    ],
+    "original_author_name": "k1ng_op",
+    "original_author_url": null
+  },
+  {
+    "dir": "fake-nitro",
+    "id": "palmdevs.fake-nitro",
+    "name": "Fake Nitro",
+    "description": "Use some Nitro features without Nitro.",
+    "author": "Palm",
+    "contributors": [
+      "contrabags <780075200950566933> (https://github.com/contrabag \"GitHub\")",
+      "nexpid <853550207039832084> (https://github.com/nexpid \"GitHub\")",
+      "aeongdesu (https://github.com/aeongdesu \"GitHub\")",
+      "Dziurwa <1001086404203389018>"
+    ],
+    "version": "1.0.0",
+    "icon": "NitroWheelIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "src/index.ts",
+      "src/settings.tsx",
+      "src/components/NoPermissionsAlert.tsx",
+      "src/components/UnsupportedStickerAlert.tsx",
+      "src/patches/icons.ts",
+      "src/patches/themes.ts",
+      "src/patches/expressions/fakeify.ts",
+      "src/patches/expressions/realify.ts",
+      "src/patches/expressions/types.ts"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://palmdevs.me"
+  },
+  {
+    "dir": "favorite-anything",
+    "id": "theunrealzaka.favorite-anything",
+    "name": "Favorite Anything",
+    "description": "Favorite any image or video, not just GIFs, and keep saved favorites loading.",
+    "author": "TheUnrealZaka",
+    "contributors": [
+      "nin0dev",
+      "davri"
+    ],
+    "version": "1.0.0",
+    "icon": "StarIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": "LICENSE",
+    "source_files": [
+      "LICENSE",
+      "README.md",
+      "tsconfig.json",
+      "js/index.ts",
+      "js/items.ts",
+      "js/renewal.ts",
+      "js/urls.ts"
+    ],
+    "original_author_name": "TheUnrealZaka",
+    "original_author_url": "https://www.theunrealzaka.me"
+  },
+  {
+    "dir": "file-size-on-picker",
+    "id": "contrabag.file-size-on-picker",
+    "name": "File Size on Picker",
+    "description": "Show file sizes in the media picker.",
+    "author": "contrabags",
+    "contributors": [
+      "Palm <629368283354628116> (https://github.com/sponsors/PalmDevs \"Donations\") (https://palmdevs.me \"Website\") (https://github.com/PalmDevs \"GitHub\")"
+    ],
+    "version": "1.0.0",
+    "icon": "FileIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/components.tsx",
+      "js/index.tsx"
+    ],
+    "original_author_name": "contrabags",
+    "original_author_url": "https://github.com/contrabag"
+  },
+  {
+    "dir": "gif-to-chat-input",
+    "id": "dev.benjii.gtci",
+    "name": "GIF to Chat Input",
+    "description": "Prevents GIFs from auto-sending from the picker and holds them in the chatbox.",
+    "author": "j",
+    "contributors": [
+      "Benjii <463702169443368970>"
+    ],
+    "version": "1.0.0",
+    "icon": "GifIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "index.ts",
+      "tsconfig.json"
+    ],
+    "original_author_name": "j",
+    "original_author_url": null
+  },
+  {
+    "dir": "global-badges",
+    "id": "wolfie.global-badges",
+    "name": "Global Badges",
+    "description": "Show profile badges from other Discord clients and BadgeVault.",
+    "author": "Wolfie",
+    "contributors": [
+      "Palm <629368283354628116> (https://github.com/sponsors/PalmDevs \"Donations\") (https://palmdevs.me \"Website\") (https://github.com/PalmDevs \"GitHub\")"
+    ],
+    "version": "1.0.0",
+    "icon": "AwardIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": ">=351.1"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "badges.ts",
+      "index.ts",
+      "settings.tsx",
+      "tsconfig.json",
+      "viewer.ts"
+    ],
+    "original_author_name": "Wolfie",
+    "original_author_url": "https://wolfies.org/"
+  },
+  {
+    "dir": "hide-blocked-messages",
+    "id": "palmdevs.hide-blocked-messages",
+    "name": "Hide Blocked Messages",
+    "description": "Hides messages from blocked or ignored users, and optionally removes replies to them.",
+    "author": "Palm",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "DenyIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "index.ts",
+      "settings.tsx",
+      "tsconfig.json"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://github.com/sponsors/PalmDevs"
+  },
+  {
+    "dir": "hide-call-buttons",
+    "id": "bleelblep.hide-call-buttons",
+    "name": "Hide Call Buttons",
+    "description": "Hide call and video buttons on profiles, at the top of DMs, in the friends list and in voice channels.",
+    "author": "bleelblep",
+    "contributors": [
+      "John <780819226839220265> (https://github.com/janisslsm \"GitHub\")"
+    ],
+    "version": "1.0.0",
+    "icon": "PhoneCallIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": ">=350.2"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": "LICENSE",
+    "source_files": [
+      "LICENSE",
+      "NOTICE",
+      "index.ts",
+      "settings.tsx",
+      "shared.ts",
+      "tsconfig.json"
+    ],
+    "original_author_name": "bleelblep",
+    "original_author_url": null
+  },
+  {
+    "dir": "join-as-lurker",
+    "id": "palmdevs.join-as-lurker",
+    "name": "Join as Lurker",
+    "description": "Joins discoverable servers in lurker mode (server preview) instead of as a member.",
+    "author": "Palm",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "EyeIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "index.ts",
+      "tsconfig.json"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://github.com/sponsors/PalmDevs"
+  },
+  {
+    "dir": "jump-to-top",
+    "id": "dev.tralwdwdd.jump-to-top",
+    "name": "Jump To Top",
+    "description": "Adds a button to jump to the first message in a chat.",
+    "author": "tralwdwdd",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "ArrowSmallUpIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      },
+      "dev.tralwdwd.action-sheet-patcher": {
+        "version": ">=1.0.0"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/index.ts",
+      "js/utils.ts",
+      "js/modules/actions.ts",
+      "js/modules/misc.ts",
+      "js/patches/actionsheet.tsx",
+      "js/patches/jumptopresentbutton.tsx",
+      "js/ui/components/JumpToTopButton.tsx"
+    ],
+    "original_author_name": "tralwdwdd",
+    "original_author_url": "https://github.com/tralwdwd"
+  },
+  {
+    "dir": "link-alert-copy",
+    "id": "palmdevs.link-alert-copy",
+    "name": "Link Alert Copy",
+    "description": "Shows a Copy Link button in the \"Leaving Discord\" alert.",
+    "author": "Palm",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "LinkIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "index.tsx",
+      "tsconfig.json"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://github.com/sponsors/PalmDevs"
+  },
+  {
+    "dir": "mention-avatars",
+    "id": "palmdevs.mention-avatars",
+    "name": "Mention Avatars",
+    "description": "Avatars in user mentions, role icons in role mentions, and group icons in group DM links.",
+    "author": "Palm",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "AtIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": ">=352.2"
+      }
+    },
+    "dist": {
+      "script": "index.js",
+      "android": {
+        "path": "plugin.jar",
+        "class": "me.palmdevs.valenced.mentionavatars.MentionAvatars"
+      }
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/index.ts",
+      "js/mentions.ts",
+      "js/types.ts",
+      "src/main/kotlin/me/palmdevs/valenced/mentionavatars/IconHooks.kt",
+      "src/main/kotlin/me/palmdevs/valenced/mentionavatars/MentionAvatars.kt"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://github.com/sponsors/PalmDevs"
+  },
+  {
+    "dir": "message-link-preview",
+    "id": "palmdevs.message-link-preview",
+    "name": "Message Link Preview",
+    "description": "Preview and interact with messages that you've got linked to.",
+    "author": "Palm",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "ChatIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": ">=352.2"
+      }
+    },
+    "dist": {
+      "script": "index.js",
+      "android": {
+        "path": "plugin.jar",
+        "class": "me.palmdevs.valenced.messagelinkpreview.MessageLinkPreview"
+      }
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/cache.ts",
+      "js/discord.ts",
+      "js/embed.ts",
+      "js/fetch.ts",
+      "js/index.ts",
+      "js/interaction.ts",
+      "js/links.ts",
+      "js/members.ts",
+      "js/native.ts",
+      "js/previews.ts",
+      "js/rows.ts",
+      "js/settings.tsx",
+      "js/shared.ts",
+      "js/types.ts",
+      "js/updates.ts",
+      "js/utils.ts",
+      "src/main/kotlin/me/palmdevs/valenced/messagelinkpreview/EmbedParts.kt",
+      "src/main/kotlin/me/palmdevs/valenced/messagelinkpreview/MessageLinkPreview.kt",
+      "src/main/kotlin/me/palmdevs/valenced/messagelinkpreview/MessageViews.kt",
+      "src/main/kotlin/me/palmdevs/valenced/messagelinkpreview/Preview.kt",
+      "src/main/kotlin/me/palmdevs/valenced/messagelinkpreview/PreviewContainer.kt",
+      "src/main/kotlin/me/palmdevs/valenced/messagelinkpreview/PreviewHooks.kt"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://github.com/sponsors/PalmDevs"
+  },
+  {
+    "dir": "message-logger",
+    "id": "palmdevs.message-logger",
+    "name": "Message Logger",
+    "description": "Keep deleted messages, attachments, and edit history.",
+    "author": "Palm",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "ChatXIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": ">=352.2"
+      }
+    },
+    "dist": {
+      "script": "index.js",
+      "android": {
+        "path": "plugin.jar",
+        "class": "me.palmdevs.valenced.messagelogger.MessageLogger"
+      }
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/actionsheet.tsx",
+      "js/index.ts",
+      "js/rows.ts",
+      "js/logger.ts",
+      "js/native.ts",
+      "js/settings.tsx",
+      "js/shared.ts",
+      "src/main/kotlin/me/palmdevs/valenced/messagelogger/History.kt",
+      "src/main/kotlin/me/palmdevs/valenced/messagelogger/LoggerHooks.kt",
+      "src/main/kotlin/me/palmdevs/valenced/messagelogger/Mentions.kt",
+      "src/main/kotlin/me/palmdevs/valenced/messagelogger/MessageLogger.kt"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://github.com/sponsors/PalmDevs"
+  },
+  {
+    "dir": "no-embed-copy",
+    "id": "thororen.no-embed-copy",
+    "name": "No Embed Copy",
+    "description": "Makes pressing on an embed no longer copy its content.",
+    "author": "thororen",
+    "contributors": [
+      "redstonekasi <265064055490871297> (https://github.com/redstonekasi \"GitHub\")"
+    ],
+    "version": "1.0.0",
+    "icon": "CopyIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "NOTICE",
+      "index.ts",
+      "tsconfig.json"
+    ],
+    "original_author_name": "thororen",
+    "original_author_url": "https://www.thororen.com"
+  },
+  {
+    "dir": "no-idle",
+    "id": "k1ngop.no-idle",
+    "name": "No Idle",
+    "description": "Prevent status from idling when Discord is in the background.",
+    "author": "k1ng_op",
+    "contributors": [
+      "amsryq"
+    ],
+    "version": "1.0.0",
+    "icon": "StatusIdle",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/index.ts"
+    ],
+    "original_author_name": "k1ng_op",
+    "original_author_url": null
+  },
+  {
+    "dir": "nsfw-blur",
+    "id": "thororen.nsfw-blur",
+    "name": "NSFW Blur",
+    "description": "Blur images and disable embed media in NSFW channels.",
+    "author": "thororen",
+    "contributors": [
+      "sylv256 <209015289990348800>",
+      "siguma <737597276339437578>"
+    ],
+    "version": "1.0.0",
+    "icon": "ImageIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "NOTICE",
+      "index.ts",
+      "tsconfig.json"
+    ],
+    "original_author_name": "thororen",
+    "original_author_url": "https://www.thororen.com"
+  },
+  {
+    "dir": "petpet",
+    "id": "dev.cocobo1.petpet",
+    "name": "PetPet",
+    "description": "pet anyone with /petpet",
+    "author": "cocobo1",
+    "contributors": [
+      "Wolfie <347096063569559553>"
+    ],
+    "version": "1.0.2",
+    "icon": "EmojiSmilingFaceWithHeartsIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      },
+      "dev.cocobo1.command-lib": {
+        "version": ">=2 <3"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/index.ts"
+    ],
+    "original_author_name": "cocobo1",
+    "original_author_url": "https://cocobo1.dev"
+  },
+  {
+    "dir": "reactions-sheet-fix",
+    "id": "palmdevs.reactions-sheet-fix",
+    "name": "Reactions Sheet Fix",
+    "description": "Fixes the reactions sheet loading forever when users reacted after it was first opened.",
+    "author": "Palm",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "WrenchIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/index.ts"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://github.com/sponsors/PalmDevs"
+  },
+  {
+    "dir": "read-all-notifications",
+    "id": "dev.nexza.read-all-notifications",
+    "name": "Read All Notifications",
+    "description": "Mark unread server channels as read with a button under your DMs in the server list.",
+    "author": "NexzaDev",
+    "contributors": [
+      "kemo (https://github.com/kem0x \"GitHub\")"
+    ],
+    "version": "1.0.1",
+    "icon": "ChatCheckIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "NOTICE",
+      "button.tsx",
+      "guards.ts",
+      "index.ts",
+      "layout.ts",
+      "tsconfig.json",
+      "unread.ts"
+    ],
+    "original_author_name": "NexzaDev",
+    "original_author_url": "https://github.com/NexzaDev"
+  },
+  {
+    "dir": "search-action-sheet",
+    "id": "dev.tralwdwdd.search-action-sheet",
+    "name": "Search Action Sheet",
+    "description": "Makes search results open the action sheet on long press.",
+    "author": "tralwdwdd",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "icon-search",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      },
+      "dev.tralwdwd.action-sheet-patcher": {
+        "version": ">=1.0.0"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/index.ts",
+      "js/patches.ts"
+    ],
+    "original_author_name": "tralwdwdd",
+    "original_author_url": "https://github.com/tralwdwd"
+  },
+  {
+    "dir": "selectable-bios",
+    "id": "dev.loki-vtx.selectablebios",
+    "name": "Selectable Bios",
+    "description": "Makes profile 'About Me' text selectable, allowing you to copy and share it.",
+    "author": "Loki-vtx",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "PencilIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/index.ts"
+    ],
+    "original_author_name": "Loki-vtx",
+    "original_author_url": "https://github.com/Loki-vtx"
+  },
+  {
+    "dir": "settings.themes",
+    "id": "valenced.settings.themes",
+    "name": "Themes",
+    "description": "Color themes, font packs, icon packs, and emoji packs.",
+    "author": "Valenced",
+    "contributors": [
+      "Palm <629368283354628116> (https://github.com/sponsors/PalmDevs \"Donations\") (https://palmdevs.me \"Website\") (https://github.com/PalmDevs \"GitHub\")"
+    ],
+    "version": "1.0.0",
+    "icon": "PaintPaletteIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      },
+      "valenced.settings": {},
+      "valenced.api.themes": {
+        "version": ">=1 <2"
+      },
+      "valenced.settings.plugins": {}
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "package.json",
+      "tsconfig.json",
+      "js/constants.ts",
+      "js/index.tsx",
+      "js/register.tsx",
+      "js/types.ts",
+      "js/components/KindCard.tsx",
+      "js/components/KindHints.tsx",
+      "js/components/OptionList.tsx",
+      "js/components/PluginInfoButton.tsx",
+      "js/components/PluginSettingsButton.tsx",
+      "js/components/Previews.tsx",
+      "js/components/ReloadButton.tsx",
+      "js/screens/ValencedThemesBackgroundSettingScreen.tsx",
+      "js/screens/ValencedThemesBrowseSettingScreen.tsx",
+      "js/screens/ValencedThemesFontFamiliesSettingScreen.tsx",
+      "js/screens/ValencedThemesFontFamilySettingScreen.tsx",
+      "js/screens/ValencedThemesGroupSettingScreen.tsx",
+      "js/screens/ValencedThemesKindSettingScreen.tsx",
+      "js/screens/ValencedThemesPluginsSettingScreen.tsx",
+      "js/screens/ValencedThemesSettingScreen.tsx",
+      "js/definitions/ValencedThemesBackgroundSetting.tsx",
+      "js/definitions/ValencedThemesBrowseSetting.tsx",
+      "js/definitions/ValencedThemesFontFamiliesSetting.tsx",
+      "js/definitions/ValencedThemesFontFamilySetting.tsx",
+      "js/definitions/ValencedThemesGroupSetting.tsx",
+      "js/definitions/ValencedThemesKindSetting.tsx",
+      "js/definitions/ValencedThemesPluginsSetting.tsx",
+      "js/definitions/ValencedThemesSetting.tsx",
+      "js/utils/fonts.ts",
+      "js/utils/kinds.ts",
+      "js/utils/plugins.ts",
+      "js/utils/reload.ts",
+      "js/utils/toasts.ts"
+    ],
+    "original_author_name": "Valenced",
+    "original_author_url": null
+  },
+  {
+    "dir": "shiki-codeblocks",
+    "id": "palmdevs.shiki-codeblocks",
+    "name": "Shiki Codeblocks",
+    "description": "Highlighted and selectable code blocks in chat with Shiki and custom themes.",
+    "author": "Palm",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "PollsIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": ">=352.2"
+      }
+    },
+    "dist": {
+      "script": "index.js",
+      "android": {
+        "path": "plugin.jar",
+        "class": "me.palmdevs.valenced.shikicodeblocks.ShikiCodeblocks"
+      }
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "README.md",
+      "biome.json",
+      "package.json",
+      "shiki.config.ts",
+      "tsconfig.json",
+      "assets/shiki/index.json",
+      "assets/shiki/langs/bat.json",
+      "assets/shiki/langs/c.json",
+      "assets/shiki/langs/cpp-macro.json",
+      "assets/shiki/langs/cpp.json",
+      "assets/shiki/langs/csharp.json",
+      "assets/shiki/langs/css.json",
+      "assets/shiki/langs/dart.json",
+      "assets/shiki/langs/diff.json",
+      "assets/shiki/langs/docker.json",
+      "assets/shiki/langs/elixir.json",
+      "assets/shiki/langs/glsl.json",
+      "assets/shiki/langs/go.json",
+      "assets/shiki/langs/graphql.json",
+      "assets/shiki/langs/haml.json",
+      "assets/shiki/langs/haskell.json",
+      "assets/shiki/langs/html.json",
+      "assets/shiki/langs/ini.json",
+      "assets/shiki/langs/java.json",
+      "assets/shiki/langs/javascript.json",
+      "assets/shiki/langs/json.json",
+      "assets/shiki/langs/jsonc.json",
+      "assets/shiki/langs/jsx.json",
+      "assets/shiki/langs/kotlin.json",
+      "assets/shiki/langs/lua.json",
+      "assets/shiki/langs/luau.json",
+      "assets/shiki/langs/markdown.json",
+      "assets/shiki/langs/php.json",
+      "assets/shiki/langs/powershell.json",
+      "assets/shiki/langs/python.json",
+      "assets/shiki/langs/r.json",
+      "assets/shiki/langs/regexp.json",
+      "assets/shiki/langs/ruby.json",
+      "assets/shiki/langs/rust.json",
+      "assets/shiki/langs/scala.json",
+      "assets/shiki/langs/scss.json",
+      "assets/shiki/langs/shellscript.json",
+      "assets/shiki/langs/sql.json",
+      "assets/shiki/langs/swift.json",
+      "assets/shiki/langs/toml.json",
+      "assets/shiki/langs/tsx.json",
+      "assets/shiki/langs/typescript.json",
+      "assets/shiki/langs/xml.json",
+      "assets/shiki/langs/yaml.json",
+      "assets/shiki/langs/zig.json",
+      "assets/shiki/regexes/bat.json",
+      "assets/shiki/regexes/c.json",
+      "assets/shiki/regexes/cpp-macro.json",
+      "assets/shiki/regexes/cpp.json",
+      "assets/shiki/regexes/csharp.json",
+      "assets/shiki/regexes/css.json",
+      "assets/shiki/regexes/dart.json",
+      "assets/shiki/regexes/diff.json",
+      "assets/shiki/regexes/docker.json",
+      "assets/shiki/regexes/elixir.json",
+      "assets/shiki/regexes/glsl.json",
+      "assets/shiki/regexes/go.json",
+      "assets/shiki/regexes/graphql.json",
+      "assets/shiki/regexes/haml.json",
+      "assets/shiki/regexes/haskell.json",
+      "assets/shiki/regexes/html.json",
+      "assets/shiki/regexes/ini.json",
+      "assets/shiki/regexes/java.json",
+      "assets/shiki/regexes/javascript.json",
+      "assets/shiki/regexes/json.json",
+      "assets/shiki/regexes/jsonc.json",
+      "assets/shiki/regexes/jsx.json",
+      "assets/shiki/regexes/kotlin.json",
+      "assets/shiki/regexes/lua.json",
+      "assets/shiki/regexes/luau.json",
+      "assets/shiki/regexes/markdown.json",
+      "assets/shiki/regexes/php.json",
+      "assets/shiki/regexes/powershell.json",
+      "assets/shiki/regexes/python.json",
+      "assets/shiki/regexes/r.json",
+      "assets/shiki/regexes/regexp.json",
+      "assets/shiki/regexes/ruby.json",
+      "assets/shiki/regexes/rust.json",
+      "assets/shiki/regexes/scala.json",
+      "assets/shiki/regexes/scss.json",
+      "assets/shiki/regexes/shellscript.json",
+      "assets/shiki/regexes/sql.json",
+      "assets/shiki/regexes/swift.json",
+      "assets/shiki/regexes/toml.json",
+      "assets/shiki/regexes/tsx.json",
+      "assets/shiki/regexes/typescript.json",
+      "assets/shiki/regexes/xml.json",
+      "assets/shiki/regexes/yaml.json",
+      "assets/shiki/regexes/zig.json",
+      "assets/shiki/themes/ayu-dark.json",
+      "assets/shiki/themes/catppuccin-latte.json",
+      "assets/shiki/themes/catppuccin-mocha.json",
+      "assets/shiki/themes/dark-plus.json",
+      "assets/shiki/themes/dracula.json",
+      "assets/shiki/themes/github-dark-default.json",
+      "assets/shiki/themes/github-light-default.json",
+      "assets/shiki/themes/gruvbox-dark-medium.json",
+      "assets/shiki/themes/gruvbox-light-medium.json",
+      "assets/shiki/themes/kanagawa-wave.json",
+      "assets/shiki/themes/light-plus.json",
+      "assets/shiki/themes/material-theme-darker.json",
+      "assets/shiki/themes/monokai.json",
+      "assets/shiki/themes/night-owl.json",
+      "assets/shiki/themes/nord.json",
+      "assets/shiki/themes/one-dark-pro.json",
+      "assets/shiki/themes/one-light.json",
+      "assets/shiki/themes/rose-pine-dawn.json",
+      "assets/shiki/themes/rose-pine.json",
+      "assets/shiki/themes/solarized-dark.json",
+      "assets/shiki/themes/solarized-light.json",
+      "assets/shiki/themes/tokyo-night.json",
+      "assets/shiki/themes/vitesse-dark.json",
+      "assets/shiki/themes/vitesse-light.json",
+      "js/ansi.ts",
+      "js/assets.ts",
+      "js/discord.ts",
+      "js/highlighter.ts",
+      "js/index.ts",
+      "js/native.ts",
+      "js/regex.ts",
+      "js/settings.tsx",
+      "js/themes.ts",
+      "js/types.ts",
+      "scripts/generate.ts",
+      "src/main/kotlin/me/palmdevs/valenced/shikicodeblocks/CodeStyleHooks.kt",
+      "src/main/kotlin/me/palmdevs/valenced/shikicodeblocks/CodeViewer.kt",
+      "src/main/kotlin/me/palmdevs/valenced/shikicodeblocks/DiscordPalette.kt",
+      "src/main/kotlin/me/palmdevs/valenced/shikicodeblocks/Highlights.kt",
+      "src/main/kotlin/me/palmdevs/valenced/shikicodeblocks/ShikiCodeblocks.kt"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://github.com/sponsors/PalmDevs"
+  },
+  {
+    "dir": "show-tag",
+    "id": "bleelblep.show-tag",
+    "name": "Show Tag",
+    "description": "Show usernames next to display names in chat, including in replies.",
+    "author": "bleelblep",
+    "contributors": [
+      "Cynosphere <150745989836308480> (https://github.com/Cynosphere \"GitHub\")"
+    ],
+    "version": "1.0.0",
+    "icon": "AtIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": ">=350.2"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": "LICENSE",
+    "source_files": [
+      "LICENSE",
+      "NOTICE",
+      "index.ts",
+      "settings.tsx",
+      "shared.ts",
+      "tsconfig.json"
+    ],
+    "original_author_name": "bleelblep",
+    "original_author_url": null
+  },
+  {
+    "dir": "show-timeout-duration",
+    "id": "palmdevs.show-timeout-duration",
+    "name": "Show Timeout Duration",
+    "description": "Show remaining timeout duration above usernames in chat.",
+    "author": "Palm",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "ClockWarningIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": ">=352.2"
+      }
+    },
+    "dist": {
+      "script": "index.js",
+      "android": {
+        "path": "plugin.jar",
+        "class": "me.palmdevs.valenced.showtimeoutduration.ShowTimeoutDuration"
+      }
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/index.ts",
+      "js/native.ts",
+      "src/main/kotlin/me/palmdevs/valenced/showtimeoutduration/ShowTimeoutDuration.kt",
+      "src/main/kotlin/me/palmdevs/valenced/showtimeoutduration/TimeoutHooks.kt",
+      "src/main/kotlin/me/palmdevs/valenced/showtimeoutduration/TimeoutLine.kt"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://github.com/sponsors/PalmDevs"
+  },
+  {
+    "dir": "silent-typing",
+    "id": "palmdevs.silent-typing",
+    "name": "Silent Typing",
+    "description": "Disables the typing indicator when you type.",
+    "author": "Palm",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "KeyboardIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "index.tsx",
+      "settings.tsx",
+      "shared.ts",
+      "tsconfig.json"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://github.com/sponsors/PalmDevs"
+  },
+  {
+    "dir": "sound-controls",
+    "id": "wolfie.sound-controls",
+    "name": "Sound Controls",
+    "description": "Mute individual call effects, ringtones, and in-app notification sounds.",
+    "author": "Wolfie",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "SoundboardSlashIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "README.md",
+      "index.ts",
+      "preview.ts",
+      "settings.tsx",
+      "sounds.ts",
+      "tsconfig.json"
+    ],
+    "original_author_name": "Wolfie",
+    "original_author_url": "https://wolfies.org/"
+  },
+  {
+    "dir": "tenor-gif-fix",
+    "id": "thororen.tenor-gif-fix",
+    "name": "Tenor GIF Fix",
+    "description": "Download and share Tenor links as GIFs instead of MP4s.",
+    "author": "thororen",
+    "contributors": [
+      "nexpid <853550207039832084> (https://github.com/nexpid \"GitHub\")"
+    ],
+    "version": "1.0.0",
+    "icon": "GifIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "NOTICE",
+      "index.ts",
+      "tsconfig.json"
+    ],
+    "original_author_name": "thororen",
+    "original_author_url": "https://www.thororen.com"
+  },
+  {
+    "dir": "tenor-gif-search",
+    "id": "palmdevs.tenor-gif-search",
+    "name": "Tenor GIF Search",
+    "description": "Brings back Tenor GIF search to Discord.",
+    "author": "Palm",
+    "contributors": [
+      "Livie <755950362342457384>"
+    ],
+    "version": "1.0.0",
+    "icon": "GifIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "index.ts",
+      "settings.tsx",
+      "tsconfig.json"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://github.com/sponsors/PalmDevs"
+  },
+  {
+    "dir": "themes.legacy",
+    "id": "valenced.themes.legacy",
+    "name": "Legacy Themes",
+    "description": "Import and use legacy themes and font packs by URL.",
+    "author": "Valenced",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "PaintPaletteIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      },
+      "valenced.api.themes": {
+        "version": ">=1 <2"
+      },
+      "valenced.settings.themes": {}
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "package.json",
+      "tsconfig.json",
+      "js/index.tsx",
+      "js/parsers.ts",
+      "js/settings.tsx"
+    ],
+    "original_author_name": "Valenced",
+    "original_author_url": null
+  },
+  {
+    "dir": "valid-user",
+    "id": "k1ngop.valid-user",
+    "name": "ValidUser",
+    "description": "Resolves @unknown-user mentions to a normal clickable mention.",
+    "author": "k1ng_op",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "AtIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "js/index.ts"
+    ],
+    "original_author_name": "k1ng_op",
+    "original_author_url": "https://github.com/k1ng0p"
+  },
+  {
+    "dir": "who-reacted",
+    "id": "palmdevs.who-reacted",
+    "name": "Who Reacted",
+    "description": "Shows the avatars of up to 5 people who reacted on each reaction in chat.",
+    "author": "Palm",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "ReactionIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": ">=352.2"
+      }
+    },
+    "dist": {
+      "script": "index.js",
+      "android": {
+        "path": "plugin.jar",
+        "class": "me.palmdevs.valenced.whoreacted.WhoReacted"
+      }
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "tsconfig.json",
+      "js/index.ts",
+      "js/native.ts",
+      "js/settings.tsx",
+      "js/shared.ts",
+      "src/main/kotlin/me/palmdevs/valenced/whoreacted/AvatarStack.kt",
+      "src/main/kotlin/me/palmdevs/valenced/whoreacted/ReactionHooks.kt",
+      "src/main/kotlin/me/palmdevs/valenced/whoreacted/WhoReacted.kt"
+    ],
+    "original_author_name": "Palm",
+    "original_author_url": "https://github.com/sponsors/PalmDevs"
+  },
+  {
+    "dir": "youbar-plus",
+    "id": "purpleeyez.youbar-plus",
+    "name": "YouBar+",
+    "description": "Add settings, DM and favorites buttons to the You Bar.",
+    "author": "Purple_\u039eye\u2122",
+    "contributors": [],
+    "version": "1.0.0",
+    "icon": "UserCircleIcon",
+    "dependencies": {
+      "valenced.api": {
+        "version": ">=1 <2"
+      },
+      "discord": {
+        "version": "*"
+      }
+    },
+    "dist": {
+      "script": "index.js"
+    },
+    "format": 1,
+    "license_file": null,
+    "source_files": [
+      "index.tsx",
+      "settings.tsx",
+      "shared.ts",
+      "tsconfig.json"
+    ],
+    "original_author_name": "Purple_\u039eye\u2122",
+    "original_author_url": "https://github.com/Purple-EyeZ"
+  }
+]

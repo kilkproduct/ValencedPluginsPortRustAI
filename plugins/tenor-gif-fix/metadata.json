@@ -1,0 +1,21 @@
+{
+  "name": "tenor-gif-fix",
+  "target_id": "phoenix.tenor-gif-fix",
+  "description": "Download and share Tenor links as GIFs instead of MP4s",
+  "version": "1.0.0",
+  "original": {
+    "id": "thororen.tenor-gif-fix",
+    "name": "Tenor GIF Fix",
+    "author": "thororen",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/tenor-gif-fix"
+  },
+  "compatibility": "B",
+  "status": "IMPLEMENTED",
+  "phoenix_api": [
+    "messages.onSend",
+    "ui.addMessageAction",
+    "ui.copy"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

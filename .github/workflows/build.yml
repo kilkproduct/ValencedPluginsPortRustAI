@@ -1,0 +1,88 @@
+name: build
+
+# Everything runs on GitHub's hosted runners, including the typecheck: the
+# TypeScript declarations are the API contract, so they are fetched rather
+# than assumed. `.vendor/` is not committed (see .gitignore).
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      plugin:
+        description: "Bundle only this plugin directory (blank = all)"
+        required: false
+        type: string
+
+env:
+  PHOENIX_REPO: https://github.com/mantikafasi/phoenix-unlock
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Fetch Phoenix API declarations and bundler reference
+        run: |
+          set -euo pipefail
+          if [ -f .vendor/phoenix/crates/runtime/phoenix.d.ts ]; then
+            echo "using vendored Phoenix tree"
+            exit 0
+          fi
+          git clone --depth 1 --filter=blob:none --sparse "$PHOENIX_REPO" /tmp/phoenix
+          git -C /tmp/phoenix sparse-checkout set crates/runtime crates/wire web/tools plugins
+          mkdir -p .vendor
+          mv /tmp/phoenix .vendor/phoenix
+          test -f .vendor/phoenix/crates/runtime/phoenix.d.ts
+
+      - run: npm ci --no-audit --no-fund || npm install --no-audit --no-fund
+
+      - name: Typecheck (strict, against phoenix.d.ts)
+        run: npm run typecheck
+
+      - name: Bundle every plugin
+        if: ${{ !inputs.plugin }}
+        run: npm run build
+
+      - name: Bundle one plugin
+        if: ${{ inputs.plugin }}
+        run: |
+          set -euo pipefail
+          npx tsc -p tsconfig.json
+          npx esbuild "plugins/${{ inputs.plugin }}/src/index.ts" \
+            --bundle --format=iife --target=es2023 \
+            --outfile="dist/${{ inputs.plugin }}.js"
+
+      - name: Behavioural tests (mock phoenix runtime)
+        run: npm test
+
+      - name: Inventory and plugin docs are current
+        run: |
+          set -euo pipefail
+          node scripts/docs.mjs
+          if ! git diff --quiet -- migration plugins; then
+            git --no-pager diff --stat -- migration plugins
+            echo "::error::migration/status.json or generated plugin docs are stale — run node scripts/docs.mjs and commit the result"
+            exit 1
+          fi
+
+      - name: Upload bundles
+        uses: actions/upload-artifact@v4
+        with:
+          name: phoenix-community-ports-dist
+          path: dist/
+          if-no-files-found: error
+
+      - name: Upload test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phoenix-community-ports-test-results
+          path: migration/test-results.json
+          if-no-files-found: warn

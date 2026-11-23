@@ -1,0 +1,21 @@
+{
+  "name": "who-reacted",
+  "target_id": "phoenix.who-reacted",
+  "description": "Lists who reacted to a message",
+  "version": "1.0.0",
+  "original": {
+    "id": "palmdevs.who-reacted",
+    "name": "Who Reacted",
+    "author": "Palm",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/who-reacted"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "ui.addMessageAction",
+    "discord.get",
+    "ui.openPage"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}

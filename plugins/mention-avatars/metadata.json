@@ -1,0 +1,21 @@
+{
+  "name": "mention-avatars",
+  "target_id": "phoenix.mention-avatars",
+  "description": "Show avatars next to mentions in chat",
+  "version": "1.0.0",
+  "original": {
+    "id": "palmdevs.mention-avatars",
+    "name": "Mention Avatars",
+    "author": "Palm",
+    "version": "1.0.0",
+    "source": "https://github.com/Valenced/valenced-community-plugins/tree/main/plugins/mention-avatars"
+  },
+  "compatibility": "D",
+  "status": "PARTIAL",
+  "phoenix_api": [
+    "ui.addMessageAccessory",
+    "ui.addMessageAction",
+    "ui.openPage"
+  ],
+  "license": "GPL-3.0 (original repository) — this port is an independent reimplementation, see docs/attribution.md"
+}
