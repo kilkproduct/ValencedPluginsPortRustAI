@@ -26,13 +26,18 @@ what is missing, and its original author.
 
 ## Install
 
-1. Build (or use `dist/`): `npm install && npm run build`.
-2. Copy the bundles you want — `dist/<plugin>.js` — to the phone.
-3. Settings → Phoenix Unlocker → Plugins → add the `.js` file.
-4. Each plugin's settings appear on its page under Settings → Phoenix Unlocker → Plugins.
+Four routes, all verified against Phoenix's own source — full detail in
+[`docs/installation.md`](docs/installation.md):
 
-`dist/index.json` is written in the same shape Phoenix's own bundler emits
-(`{name, description, warning?}`), so the collection can also be served as a plugin repository.
+| Route | When | How |
+| --- | --- | --- |
+| **A file** | try a plugin or two | Copy `dist/<name>.js` to the phone → Settings → Phoenix Unlocker → Plugins → *Choose a .js file* |
+| **A URL** | update without a cable | Serve `<name>.js` over HTTPS → same page → *From a URL* → paste the link |
+| **Bake into the APK** | fresh install, no Phoenix build yet | On <https://mantikafasi.github.io/phoenix-unlock/>, enable **Plugin runtime** and add the `.js` files under **Your plugins** |
+| **Debug shell** | scripting / development | `adb forward tcp:4242 tcp:4242` then `curl -X PUT --data-binary @dist/<name>.js http://127.0.0.1:4242/plugins/<name>` |
+
+`npm run build` also writes Phoenix's own layout to `phoenix/<name>/src/index.ts` + `<name>.js`, which can be
+copied into a Phoenix checkout's `plugins/` and bundled with `node web/tools/bundle-plugins.mjs`.
 
 ## Compatibility table
 
