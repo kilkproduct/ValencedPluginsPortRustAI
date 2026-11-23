@@ -509,7 +509,8 @@ writeFileSync(
   `${root}migration/test-results.json`,
   JSON.stringify(
     {
-      generated: new Date().toISOString(),
+      // No timestamp: this file is committed as evidence, and it should only
+      // change when behaviour changes (CI checks that docs/inventory are clean).
       kind: "mock-runtime behavioural test (not a device test)",
       harness: "scripts/test.mjs",
       passed: pass,

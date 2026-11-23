@@ -1,5 +1,4 @@
 {
-  "generated": "2026-11-23T18:16:17.124Z",
   "kind": "mock-runtime behavioural test (not a device test)",
   "harness": "scripts/test.mjs",
   "passed": 28,

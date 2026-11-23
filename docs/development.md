@@ -65,7 +65,8 @@ so a new port cannot be merged without a behavioural assertion. For each bundle 
 5. presses every header/composer button and runs every command;
 6. fires injected view events, then calls every `onUnload` cleanup and settles promises again.
 
-Results are printed and written to `migration/test-results.json`.
+Results are printed and written to `migration/test-results.json` — without a timestamp, because that file
+is committed as evidence and CI requires the working tree to stay clean after running the generators.
 
 Add an expectation when you add a plugin:
 
